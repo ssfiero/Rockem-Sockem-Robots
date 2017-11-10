@@ -20,10 +20,10 @@ The player will use the arrow keys on the keyboard to punch. There will be a dam
 
 
 ## Future Features:
-1. One player vs computer. The computer is Chuck Norris that you play against.
-2. Computer randomly generates moves (punches).
-3. Three levels of difficulty: Easy, medium, and ludicrous speed (hard).
-4. Two player mode where you can play against another player.
+* One player vs computer. The computer is Chuck Norris that you play against.
+* Computer randomly generates moves (punches).
+* Three levels of difficulty: Easy, medium, and ludicrous speed (hard).
+* Two player mode where you can play against another player.
 
 
 ## Technologies:
