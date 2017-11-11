@@ -1,1 +1,60 @@
 <!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rock'em Sock'em Robots</title>
+  <!-- Pixi.js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+  <!-- Materialize - Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <div class="title">
+    <h1>Rock'em Sock'em Robots</h1>
+  </div>
+
+  <section class="playerInfo">
+    <div class="compStats">
+      <h2>Computer</h2>
+      <div class="healthComp">
+      </div>
+    </div>
+
+    <div class="play1Stats">
+      <h2>Player 1</h2>
+      <div class="healthPlay1">
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+  <!-- Test script for Pixi -->
+  <script type="text/javascript">
+    var type = "WebGL"
+    if(!PIXI.utils.isWebGLSupported()){
+     type = "canvas"
+    }
+
+    PIXI.utils.sayHello(type)
+  </script>
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- Materialize - Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- Local JS file -->
+  <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

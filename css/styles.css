@@ -1,0 +1,35 @@
+body {
+  background-color: #f7f8fa;
+}
+
+.title>h1 {
+  font-size: 40px;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.compStats, .play1Stats {
+  float: left;
+  margin: 0 auto;
+}
+
+.compStats {
+  margin-right: 100px;
+}
+
+.compStats>h2, .play1Stats>h2 {
+  font-size: 24px;
+  margin: 10px 0px;
+}
+
+.healthComp {
+  height: 20px;
+  width: 150px;
+  border: 2px solid black;
+}
+
+.healthPlay1 {
+  height: 20px;
+  width: 150px;
+  border: 2px solid black;
+}
