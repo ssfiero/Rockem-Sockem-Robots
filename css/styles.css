@@ -4,8 +4,13 @@ body {
 
 .title>h1 {
   font-size: 40px;
-  margin: 10px 0px;
+  margin: 10px 0px 0px 0px;
   text-align: center;
+}
+
+.playerInfo {
+  display: flex;
+  height: 85px;
 }
 
 .compStats, .play1Stats {
@@ -23,13 +28,43 @@ body {
 }
 
 .healthComp {
-  height: 20px;
+  height: 22px;
   width: 150px;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .healthPlay1 {
-  height: 20px;
+  height: 22px;
   width: 150px;
-  border: 2px solid black;
+  border: 1px solid black;
+}
+
+.players {
+  display: flex;
+}
+
+.compPlayer {
+  height: 360px;
+  width: 320px;
+  background-image: url("/png/undead-left.png");
+  float: left;
+  margin: auto;
+}
+
+.player1 {
+  height: 360px;
+  width: 300px;
+  background-image: url("/png/yeti-right.png");
+  float: left;
+  margin: auto;
+}
+
+.buttonsLeft {
+  width: 45%;
+  text-align: center;
+  padding: 10px 30px;
+}
+
+.btn {
+  margin: 10px 10px;
 }

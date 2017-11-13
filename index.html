@@ -3,8 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>Rock'em Sock'em Robots</title>
-  <!-- Pixi.js cdn -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
   <!-- Materialize - Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -29,6 +27,30 @@
     </div>
   </section>
 
+  <section class="players">
+    <div class="compPlayer">
+
+    </div>
+
+    <div class="player1">
+
+    </div>
+  </section>
+
+  <section class="controlButtons">
+    <div class="buttonsLeft">
+      <button class="run btn" type="button" onclick="tryb=1;x=0;koniec=11">run</button>
+      <button class="punch btn" type="button" onclick="tryb=2;x=12;koniec=19">punch</button>
+      <button class="look btn" type="button" onclick="tryb=3;x=20;koniec=26">look around</button>
+      <button class="fall btn" type="button" onclick="tryb=4;x=27;koniec=33">fall</button>
+      <button class="getup btn" type="button" onclick="tryb=5;x=34;koniec=40">get up</button>
+      <button class="kick btn" type="button" onclick="tryb=6;x=41;koniec=47">kick</button>
+      <button class="shrug btn" type="button" onclick="tryb=7;x=48;koniec=55">shrug</button>
+      <button class="jump btn" type="button" onclick="tryb=8;x=56;koniec=66">jump</button>
+      <button class="cheer btn" type="button" onclick="tryb=9;x=67;koniec=75">cheer</button>
+      <label id="lbl"></label>
+    </div>
+  </section>
 
 
 
@@ -36,16 +58,6 @@
 
 
 
-
-  <!-- Test script for Pixi -->
-  <script type="text/javascript">
-    var type = "WebGL"
-    if(!PIXI.utils.isWebGLSupported()){
-     type = "canvas"
-    }
-
-    PIXI.utils.sayHello(type)
-  </script>
 
 
 
