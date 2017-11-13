@@ -16,13 +16,15 @@
   <section class="playerInfo">
     <div class="compStats">
       <h2>Computer</h2>
-      <div class="healthComp">
+      <div class="progress healthComp">
+         <div class="determinate" style="width: 70%"></div>
       </div>
     </div>
 
     <div class="play1Stats">
       <h2>Player 1</h2>
-      <div class="healthPlay1">
+      <div class="progress healthPlay1">
+        <div class="determinate" style="width: 70%"></div>
       </div>
     </div>
   </section>
@@ -39,16 +41,27 @@
 
   <section class="controlButtons">
     <div class="buttonsLeft">
-      <button class="run btn" type="button" onclick="tryb=1;x=0;koniec=11">run</button>
-      <button class="punch btn" type="button" onclick="tryb=2;x=12;koniec=19">punch</button>
-      <button class="look btn" type="button" onclick="tryb=3;x=20;koniec=26">look around</button>
-      <button class="fall btn" type="button" onclick="tryb=4;x=27;koniec=33">fall</button>
-      <button class="getup btn" type="button" onclick="tryb=5;x=34;koniec=40">get up</button>
-      <button class="kick btn" type="button" onclick="tryb=6;x=41;koniec=47">kick</button>
-      <button class="shrug btn" type="button" onclick="tryb=7;x=48;koniec=55">shrug</button>
-      <button class="jump btn" type="button" onclick="tryb=8;x=56;koniec=66">jump</button>
-      <button class="cheer btn" type="button" onclick="tryb=9;x=67;koniec=75">cheer</button>
-      <label id="lbl"></label>
+      <button class="runL btn" type="button" onclick="tryb=1;x=0;koniec=11">run</button>
+      <button class="punchL btn" type="button" onclick="tryb=2;x=12;koniec=19">punch</button>
+      <button class="lookL btn" type="button" onclick="tryb=3;x=20;koniec=26">look around</button>
+      <button class="fallL btn" type="button" onclick="tryb=4;x=27;koniec=33">fall</button>
+      <button class="getupL btn" type="button" onclick="tryb=5;x=34;koniec=40">get up</button>
+      <button class="kickL btn" type="button" onclick="tryb=6;x=41;koniec=47">kick</button>
+      <button class="shrugL btn" type="button" onclick="tryb=7;x=48;koniec=55">shrug</button>
+      <button class="jumpL btn" type="button" onclick="tryb=8;x=56;koniec=66">jump</button>
+      <button class="cheerL btn" type="button" onclick="tryb=9;x=67;koniec=75">cheer</button>
+    </div>
+
+    <div class="buttonsRight">
+      <button class="runR btn" type="button" onclick="tryb=1;x=0;koniec=11">run</button>
+      <button class="punchR btn" type="button" onclick="tryb=2;x=12;koniec=19">punch</button>
+      <button class="lookR btn" type="button" onclick="tryb=3;x=20;koniec=26">look around</button>
+      <button class="fallR btn" type="button" onclick="tryb=4;x=27;koniec=33">fall</button>
+      <button class="getupR btn" type="button" onclick="tryb=5;x=34;koniec=40">get up</button>
+      <button class="kickR btn" type="button" onclick="tryb=6;x=41;koniec=47">kick</button>
+      <button class="shrugR btn" type="button" onclick="tryb=7;x=48;koniec=55">shrug</button>
+      <button class="jumpR btn" type="button" onclick="tryb=8;x=56;koniec=66">jump</button>
+      <button class="cheerR btn" type="button" onclick="tryb=9;x=67;koniec=75">cheer</button>
     </div>
   </section>
 
@@ -65,8 +78,9 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- Materialize - Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <!-- Local JS file -->
+  <!-- Local JS files -->
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index-right.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+
+// ------------------ Health Bar -------------------- //
+
+
+let health = document.getElementById("health");
+// health.value -= 10;
+
+
+
+
+//------------------- Left Player ------------------ //
+
 // Specific frames for each action.
 // run = 0 - 11
 // punch = 12 - 19
@@ -18,25 +30,8 @@ let frameHeight = 360;
 let compPlayer = document.querySelector('.compPlayer');
 
 
-
 // Left player run
-// let runCounter = 0;
-// let frameRunLeft = 0;
-//
-// function runLeft() {
-//   if (frameRunLeft >= -11) {
-//     console.log(frameRunLeft);
-//     frameRunLeft--;
-//     compPlayer.style.backgroundPosition = (frameRunLeft * frameWidth) + 'px';
-//   }
-//
-// }
-//
-// let btnRun = document.querySelector('.run');
-// btnRun.addEventListener('click', runLeft);
-let i = 0;
 
-let runCounter = 0;
 let frameRunLeft = 0;
 
 function runLeft() {
@@ -47,9 +42,7 @@ function runLeft() {
   }
 }
 
-
-
-let btnRun = document.querySelector('.run');
+let btnRun = document.querySelector('.runL');
 btnRun.addEventListener('click', runLeft);
 
 
@@ -66,7 +59,7 @@ function punchLeft() {
 
 }
 
-let btnPunch = document.querySelector('.punch');
+let btnPunch = document.querySelector('.punchL');
 btnPunch.addEventListener('click', punchLeft);
 
 
@@ -83,7 +76,7 @@ function LookLeft() {
 
 }
 
-let btnLook = document.querySelector('.look');
+let btnLook = document.querySelector('.lookL');
 btnLook.addEventListener('click', LookLeft);
 
 
@@ -101,7 +94,7 @@ function FallLeft() {
 
 }
 
-let btnFall = document.querySelector('.fall');
+let btnFall = document.querySelector('.fallL');
 btnFall.addEventListener('click', FallLeft);
 
 
@@ -118,7 +111,7 @@ function GetupLeft() {
 
 }
 
-let btnGetup = document.querySelector('.getup');
+let btnGetup = document.querySelector('.getupL');
 btnGetup.addEventListener('click', GetupLeft);
 
 
@@ -135,7 +128,7 @@ function KickLeft() {
 
 }
 
-let btnKick = document.querySelector('.kick');
+let btnKick = document.querySelector('.kickL');
 btnKick.addEventListener('click', KickLeft);
 
 
@@ -152,7 +145,7 @@ function shrugLeft() {
 
 }
 
-let btnShrug = document.querySelector('.shrug');
+let btnShrug = document.querySelector('.shrugL');
 btnShrug.addEventListener('click', shrugLeft);
 
 
@@ -169,7 +162,7 @@ function jumpLeft() {
 
 }
 
-let btnJump = document.querySelector('.jump');
+let btnJump = document.querySelector('.jumpL');
 btnJump.addEventListener('click', jumpLeft);
 
 
@@ -186,66 +179,11 @@ function cheerLeft() {
 
 }
 
-let btnCheer = document.querySelector('.cheer');
+let btnCheer = document.querySelector('.cheerL');
 btnCheer.addEventListener('click', cheerLeft);
 
 
 
+
+
 });
-
-
-
-
-// Player on right side of screen
-// 9 actions - 76 frames
-// var frameWidth = 330;
-// var frameHeight = 360;
-// var spriteWidth = 27360;
-// var spriteHeight = 360;
-// var player1 = document.querySelector('.player1');
-//
-// var curPixels = 0;
-// var ti;
-//
-// function animateSpriteRight() {
-//   player1.style.backgroundPosition = curPixels + 'px 0px';
-//   curPixels = curPixels + frameWidth;
-//
-//   if (curPixels >= spriteWidth) {
-//     curPixels = 0;
-//   }
-//
-//   ti = setTimeout(animateSpriteRight, 200);
-//
-// }
-//
-// animateSpriteRight();
-
-
-
-
-
-
-
-// //Create the health bar
-// healthBar = new PIXI.DisplayObjectContainer();
-// healthBar.position.set(stage.width - 170, 6)
-// gameScene.addChild(healthBar);
-//
-// //Create the black background rectangle
-// var innerBar = new PIXI.Graphics();
-// innerBar.beginFill(0x000000);
-// innerBar.drawRect(0, 0, 128, 8);
-// innerBar.endFill();
-// healthBar.addChild(innerBar);
-//
-// //Create the front red rectangle
-// var outerBar = new PIXI.Graphics();
-// outerBar.beginFill(0xFF3300);
-// outerBar.drawRect(0, 0, 128, 8);
-// outerBar.endFill();
-// healthBar.addChild(outerBar);
-//
-// healthBar.outer = outerBar;
-//
-// healthBar.outer.width = 30;

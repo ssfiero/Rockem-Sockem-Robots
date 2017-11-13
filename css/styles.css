@@ -27,16 +27,13 @@ body {
   margin: 10px 0px;
 }
 
-.healthComp {
-  height: 22px;
+.progress {
+  height: 15px;
   width: 150px;
-  border: 1px solid black;
 }
 
-.healthPlay1 {
-  height: 22px;
-  width: 150px;
-  border: 1px solid black;
+.progress .determinate {
+  background-color: red;
 }
 
 .players {
@@ -53,7 +50,7 @@ body {
 
 .player1 {
   height: 360px;
-  width: 300px;
+  width: 320px;
   background-image: url("/png/yeti-right.png");
   float: left;
   margin: auto;
@@ -63,6 +60,14 @@ body {
   width: 45%;
   text-align: center;
   padding: 10px 30px;
+  float: left;
+}
+
+.buttonsRight {
+  width: 45%;
+  text-align: center;
+  padding: 10px 30px;
+  float: left;
 }
 
 .btn {
