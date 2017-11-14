@@ -2,10 +2,8 @@ body {
   background-color: #f7f8fa;
 }
 
-.title>h1 {
-  font-size: 40px;
-  margin: 10px 0px 0px 0px;
-  text-align: center;
+nav .nav-wrapper {
+  background-color: grey;
 }
 
 .playerInfo {
@@ -28,8 +26,8 @@ body {
 }
 
 .progress {
-  height: 15px;
-  width: 150px;
+  height: 18px;
+  width: 200px;
 }
 
 .progress .determinate {
@@ -38,22 +36,28 @@ body {
 
 .players {
   display: flex;
+  height: 360px;
 }
 
 .compPlayer {
   height: 360px;
-  width: 320px;
+  width: 330px;
   background-image: url("/png/undead-left.png");
   float: left;
   margin: auto;
+  position: absolute;
+  display: block;
 }
 
 .player1 {
   height: 360px;
-  width: 320px;
+  width: 330px;
   background-image: url("/png/yeti-right.png");
   float: left;
   margin: auto;
+  /*position: absolute;*/
+  margin-right: 25px;
+  display: block;
 }
 
 .buttonsLeft {

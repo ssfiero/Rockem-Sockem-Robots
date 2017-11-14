@@ -25,20 +25,23 @@ let health = document.getElementById("health");
 
 
 // Global variables for each frame.
-let frameWidth = 330;
+let frameWidth = 331;
 let frameHeight = 360;
-let compPlayer = document.querySelector('.player1');
+let player1 = document.querySelector('.player1');
 
 
 // Right player run
 
 let frameRunRight = 0;
+let spritex = 0;
 
 function runRight() {
   if (frameRunRight <= 11) {
     console.log(frameRunRight);
     frameRunRight++;
-    compPlayer.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
+    spritex = spritex + 25;
+    player1.style.marginRight = 45.75 + spritex + 25;
+    player1.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
   }
 }
 
@@ -47,16 +50,15 @@ btnRun.addEventListener('click', runRight);
 
 
 
-// Left player punch
+// Right player punch
 let framePunchRight = 12;
 
 function punchRight() {
   if (framePunchRight <= 19) {
     console.log(framePunchRight);
-  framePunchRight++;
-  compPlayer.style.backgroundPosition = (framePunchRight * frameWidth) + 'px';
+    framePunchRight++;
+    player1.style.backgroundPosition = (framePunchRight * frameWidth) + 'px';
   }
-
 }
 
 let btnPunch = document.querySelector('.punchR');
@@ -64,16 +66,15 @@ btnPunch.addEventListener('click', punchRight);
 
 
 
-// Left player look around
+// Right player look around
 let frameLookRight = 20;
 
 function lookRight() {
   if (frameLookRight <= 26) {
     console.log(frameLookRight);
-  frameLookRight++;
-  compPlayer.style.backgroundPosition = (frameLookRight * frameWidth) + 'px';
+    frameLookRight++;
+    player1.style.backgroundPosition = (frameLookRight * frameWidth) + 'px';
   }
-
 }
 
 let btnLook = document.querySelector('.lookR');
@@ -82,16 +83,15 @@ btnLook.addEventListener('click', lookRight);
 
 
 
-// Left player fall
+// Right player fall
 let frameFallRight = 27;
 
 function fallRight() {
   if (frameFallRight <= 33) {
     console.log(frameFallRight);
-  frameFallRight++;
-  compPlayer.style.backgroundPosition = (frameFallRight * frameWidth) + 'px';
+    frameFallRight++;
+    player1.style.backgroundPosition = (frameFallRight * frameWidth) + 'px';
   }
-
 }
 
 let btnFall = document.querySelector('.fallR');
@@ -99,16 +99,15 @@ btnFall.addEventListener('click', fallRight);
 
 
 
-// Left player get up
+// Right player get up
 let frameGetupRight = 34;
 
 function getupRight() {
   if (frameGetupRight <= 40) {
     console.log(frameGetupRight);
-  frameGetupRight++;
-  compPlayer.style.backgroundPosition = (frameGetupRight * frameWidth) + 'px';
+    frameGetupRight++;
+    player1.style.backgroundPosition = (frameGetupRight * frameWidth) + 'px';
   }
-
 }
 
 let btnGetup = document.querySelector('.getupR');
@@ -116,16 +115,15 @@ btnGetup.addEventListener('click', getupRight);
 
 
 
-// Left player kick
+// Right player kick
 let frameKickRight = 41;
 
 function kickRight() {
   if (frameKickRight <= 47) {
     console.log(frameKickRight);
-  frameKickRight++;
-  compPlayer.style.backgroundPosition = (frameKickRight * frameWidth) + 'px';
+    frameKickRight++;
+    player1.style.backgroundPosition = (frameKickRight * frameWidth) + 'px';
   }
-
 }
 
 let btnKick = document.querySelector('.kickR');
@@ -133,16 +131,15 @@ btnKick.addEventListener('click', kickRight);
 
 
 
-// Left player shrug
+// Right player shrug
 let frameShrugRight = 48;
 
 function shrugRight() {
   if (frameShrugRight <= 55) {
     console.log(frameShrugRight);
-  frameShrugRight++;
-  compPlayer.style.backgroundPosition = (frameShrugRight * frameWidth) + 'px';
+    frameShrugRight++;
+    player1.style.backgroundPosition = (frameShrugRight * frameWidth) + 'px';
   }
-
 }
 
 let btnShrug = document.querySelector('.shrugR');
@@ -150,14 +147,26 @@ btnShrug.addEventListener('click', shrugRight);
 
 
 
-// Left player jump
+// Right player jump
 let frameJumpRight = 56;
 
 function jumpRight() {
   if (frameJumpRight <= 66) {
     console.log(frameJumpRight);
   frameJumpRight++;
-  compPlayer.style.backgroundPosition = (frameJumpRight * frameWidth) + 'px';
+
+  if (frameJumpRight > 59 && frameJumpRight < 63) {
+    spritex = spritex + 15;
+    player1.style.marginRight = 45.75 + spritex + 15;
+    // spritey = spritey - 15;
+    // player1.style.marginBottom = spritey - 15;
+  } else if (frameJumpRight > 62 && frameJumpRight < 65) {
+    spritex = spritex + 75;
+    player1.style.marginRight = 45.75 + spritex + 75;
+    spritey = spritey + 100;
+    player1.style.marginBottom = spritey + 100;
+  }
+    player1.style.backgroundPosition = (frameJumpRight * frameWidth) + 'px';
   }
 
 }
@@ -167,16 +176,16 @@ btnJump.addEventListener('click', jumpRight);
 
 
 
-// Left player cheer
+// Right player cheer
 let frameCheerRight = 67;
+let spritey = 0;
 
 function cheerRight() {
   if (frameCheerRight <= 75) {
     console.log(frameCheerRight);
-  frameCheerRight++;
-  compPlayer.style.backgroundPosition = (frameCheerRight * frameWidth) + 'px';
+    frameCheerRight++;
+    player1.style.backgroundPosition = (frameCheerRight * frameWidth) + 'px';
   }
-
 }
 
 let btnCheer = document.querySelector('.cheerR');
