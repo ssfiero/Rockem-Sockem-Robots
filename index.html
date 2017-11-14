@@ -12,6 +12,7 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Rock'em Sock'em</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"></i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="index.html">Select Players</a></li>
         <li><a href="background.html">Select Backgrounds</a></li>
@@ -20,13 +21,23 @@
     </div>
   </nav>
 
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="#"></a>
-    <a class="carousel-item" href="#two!"><img src="#"></a>
-    <a class="carousel-item" href="#three!"><img src="#"></a>
-    <a class="carousel-item" href="#four!"><img src="#"></a>
-    <a class="carousel-item" href="#five!"><img src="#"></a>
-  </div>
+  <section class="carSec">
+    <div class="carousel left">
+      <a class="carousel-item" href="#Dude"><img src="/png/dude.gif"></a>
+      <a class="carousel-item" href="#Dude on Steroids"><img src="/png/dude-on-steroids.png"></a>
+      <a class="carousel-item" href="#Undead"><img src="/png/undead-left.png"></a>
+      <a class="carousel-item" href="#Ghost"><img src="/png/ghost-left.png"></a>
+      <a class="carousel-item" href="#Yeti"><img src="/png/yeti-left.png"></a>
+    </div>
+
+    <div class="carousel right">
+      <a class="carousel-item" href="#Dude"><img src="/png/dude-left.png"></a>
+      <a class="carousel-item" href="#Dude on Steroids"><img src="/png/dude-on-steroids.png"></a>
+      <a class="carousel-item" href="#Undead"><img src="/png/undead-left.png"></a>
+      <a class="carousel-item" href="#Ghost"><img src="/png/ghost-left.png"></a>
+      <a class="carousel-item" href="#Yeti"><img src="/png/yeti-left.png"></a>
+    </div>
+  </section>
 
 
 
@@ -45,6 +56,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <!-- Local JS files -->
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="index-left.js"></script>
   <script type="text/javascript" src="index-right.js"></script>
 </body>
 

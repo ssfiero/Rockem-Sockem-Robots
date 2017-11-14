@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 // ------------------ Health Bar -------------------- //
 
 
@@ -30,8 +31,9 @@ let frameHeight = 360;
 let player1 = document.querySelector('.player1');
 
 
-// Right player run
+function animeRight() {
 
+// Right player run
 let frameRunRight = 0;
 let spritex = 0;
 
@@ -43,6 +45,7 @@ function runRight() {
     player1.style.marginRight = 45.75 + spritex + 25;
     player1.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
   }
+  setTimeout(runRight, 100);
 }
 
 let btnRun = document.querySelector('.runR');
@@ -59,6 +62,7 @@ function punchRight() {
     framePunchRight++;
     player1.style.backgroundPosition = (framePunchRight * frameWidth) + 'px';
   }
+  setTimeout(punchRight, 100);
 }
 
 let btnPunch = document.querySelector('.punchR');
@@ -75,6 +79,7 @@ function lookRight() {
     frameLookRight++;
     player1.style.backgroundPosition = (frameLookRight * frameWidth) + 'px';
   }
+  setTimeout(lookRight, 100);
 }
 
 let btnLook = document.querySelector('.lookR');
@@ -92,6 +97,7 @@ function fallRight() {
     frameFallRight++;
     player1.style.backgroundPosition = (frameFallRight * frameWidth) + 'px';
   }
+  setTimeout(fallRight, 100);
 }
 
 let btnFall = document.querySelector('.fallR');
@@ -108,6 +114,7 @@ function getupRight() {
     frameGetupRight++;
     player1.style.backgroundPosition = (frameGetupRight * frameWidth) + 'px';
   }
+  setTimeout(getupRight, 100);
 }
 
 let btnGetup = document.querySelector('.getupR');
@@ -124,6 +131,7 @@ function kickRight() {
     frameKickRight++;
     player1.style.backgroundPosition = (frameKickRight * frameWidth) + 'px';
   }
+  setTimeout(kickRight, 100);
 }
 
 let btnKick = document.querySelector('.kickR');
@@ -140,6 +148,7 @@ function shrugRight() {
     frameShrugRight++;
     player1.style.backgroundPosition = (frameShrugRight * frameWidth) + 'px';
   }
+  setTimeout(shrugRight, 100);
 }
 
 let btnShrug = document.querySelector('.shrugR');
@@ -168,7 +177,7 @@ function jumpRight() {
   }
     player1.style.backgroundPosition = (frameJumpRight * frameWidth) + 'px';
   }
-
+  setTimeout(jumpRight, 100);
 }
 
 let btnJump = document.querySelector('.jumpR');
@@ -186,11 +195,17 @@ function cheerRight() {
     frameCheerRight++;
     player1.style.backgroundPosition = (frameCheerRight * frameWidth) + 'px';
   }
+  setTimeout(cheerRight, 100);
 }
 
 let btnCheer = document.querySelector('.cheerR');
 btnCheer.addEventListener('click', cheerRight);
 
+}
+
+
+// To loop back through game actions.
+setInterval(animeRight, 1500);
 
 
 
