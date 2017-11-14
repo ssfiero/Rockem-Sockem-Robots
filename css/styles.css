@@ -27,7 +27,7 @@ nav .nav-wrapper {
 
 .progress {
   height: 18px;
-  width: 200px;
+  width: 400px;
 }
 
 .progress .determinate {
@@ -60,15 +60,33 @@ nav .nav-wrapper {
   display: block;
 }
 
+.quotes-container {
+  text-align: center;
+  height: 80px;
+}
+
+i.left {
+  margin-left: 360px;
+}
+
+i.right {
+  margin-right: 360px;
+}
+
+.quotes {
+  font-size: 20px;
+  margin: 20px 400px;
+}
+
 .buttonsLeft {
-  width: 45%;
+  width: 50%;
   text-align: center;
   padding: 10px 30px;
   float: left;
 }
 
 .buttonsRight {
-  width: 45%;
+  width: 50%;
   text-align: center;
   padding: 10px 30px;
   float: left;
