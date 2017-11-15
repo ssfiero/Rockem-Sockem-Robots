@@ -30,15 +30,20 @@ nav ul a:hover {
 Carousel
 =========================*/
 
-.carousel {
+.carSec .carousel {
   background-color: slategrey;
   width: 50%;
   height: 740px;
   overflow: hidden;
 }
 
+.carousel h3 {
+  text-align: center;
+  color: maroon;
+}
+
 .carousel-item {
-  margin-top: -190px;
+  margin-top: -170px;
 }
 
 .card .card-image {
@@ -57,6 +62,34 @@ Carousel
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
   margin: 0px;
+  color: maroon;
+}
+
+
+/*=========================
+Slider
+=========================*/
+
+.slider {
+  height: 550px !important;
+  margin-bottom: 0px;
+}
+
+.slider .slides li {
+  height: 510px !important;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: maroon;
+}
+
+.quotes-container-back {
+  text-align: center;
+}
+
+.caption>h3 {
+  font-size: 50px;
+  margin-top: 100px;
 }
 
 

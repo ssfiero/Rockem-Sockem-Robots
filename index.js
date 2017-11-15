@@ -6,8 +6,13 @@ $(".button-collapse").sideNav();
 
 
 
-// ------------ Carousel ------------- //
+// ------------ Carousel for player selection ------------- //
  $('.carousel').carousel();
+
+
+
+ // ------------ Slider for background selection ------------- //
+$('.slider').slider();
 
 
 
@@ -42,15 +47,11 @@ $xhr.done(function apicall(data) {
 window.addEventListener('load', apicall);
 
 
-
-
 // Alert if there is a failed promise
 $xhr.fail(function(err) {
   // alert(err);
   console.log(err);
 });
-
-
 
 
 
