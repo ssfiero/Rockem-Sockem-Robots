@@ -25,10 +25,19 @@ nav ul a:hover {
   font-weight: bold;
 }
 
+/*nav .brand-logo {
+  font-size: 16px !important;
+  margin-left: 10px !important;
+}*/
+
 
 /*=========================
 Carousel
 =========================*/
+
+#player-select {
+  height: 804px;
+}
 
 .carSec .carousel {
   background-color: slategrey;
@@ -70,6 +79,10 @@ Carousel
 Slider
 =========================*/
 
+#background-select {
+  height: 804px;
+}
+
 .slider {
   height: 550px !important;
   margin-bottom: 0px;
@@ -92,10 +105,24 @@ Slider
   margin-top: 100px;
 }
 
+.caption>.btn {
+  width: 150px;
+  margin-left: 0px;
+}
+
 
 /*=========================
-Players
+Game page
 =========================*/
+
+#game-page {
+  height: 804px;
+}
+
+#battleground {
+background-size: cover;
+background-position: center;
+}
 
 .playerInfo {
   display: flex;
