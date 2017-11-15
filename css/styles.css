@@ -2,16 +2,74 @@ body {
   background-color: #f7f8fa;
 }
 
+
+/*=========================
+Navbar
+=========================*/
+
 nav .nav-wrapper {
-  background-color: #596e79;
+  background-color: #303030;
 }
+
+nav ul a:hover {
+  background-color: maroon;
+}
+
+.side-nav {
+  background-color: transparent;
+}
+
+.side-nav li>a {
+  color: maroon;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/*=========================
+Carousel
+=========================*/
+
+.carousel {
+  background-color: slategrey;
+  width: 50%;
+  height: 740px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  margin-top: -190px;
+}
+
+.card .card-image {
+  background-color: #273859;
+}
+
+.card .card-content {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card .card-action {
+  text-align: center;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  margin: 0px;
+}
+
+
+/*=========================
+Players
+=========================*/
 
 .playerInfo {
   display: flex;
   height: 85px;
 }
 
-.compStats, .play1Stats {
+.play1Stats, .play2Stats {
   float: left;
   margin: 0 auto;
 }
@@ -20,7 +78,7 @@ nav .nav-wrapper {
   margin-right: 100px;
 }
 
-.compStats>h2, .play1Stats>h2 {
+.play1Stats>h2, .play2Stats>h2 {
   font-size: 24px;
   margin: 10px 0px;
 }
@@ -28,6 +86,7 @@ nav .nav-wrapper {
 .progress {
   height: 18px;
   width: 400px;
+  background-color: gainsboro;
 }
 
 .progress .determinate {
@@ -39,7 +98,7 @@ nav .nav-wrapper {
   height: 360px;
 }
 
-.compPlayer {
+.player1 {
   height: 360px;
   width: 330px;
   background-image: url("/png/undead-left.png");
@@ -49,7 +108,7 @@ nav .nav-wrapper {
   display: block;
 }
 
-.player1 {
+.player2 {
   height: 360px;
   width: 330px;
   background-image: url("/png/yeti-right.png");
@@ -60,22 +119,43 @@ nav .nav-wrapper {
   display: block;
 }
 
+
+/*=========================
+Quotes
+=========================*/
+
 .quotes-container {
   text-align: center;
-  height: 80px;
+  height: 150px;
+  background-color: #303030;
+  color: white;
 }
 
 i.left {
   margin-left: 360px;
+  padding: 30px 0px;
 }
 
 i.right {
   margin-right: 360px;
+  padding: 30px 0px;
 }
 
 .quotes {
   font-size: 20px;
-  margin: 20px 400px;
+  margin: 0px 400px;
+  padding: 30px 0px;
+}
+
+
+/*=========================
+Control Buttons
+=========================*/
+
+.controlButtons {
+  background-color: #303030;
+  color: white;
+  height: 160px;
 }
 
 .buttonsLeft {
@@ -94,4 +174,5 @@ i.right {
 
 .btn {
   margin: 10px 10px;
+  background-color: maroon;
 }

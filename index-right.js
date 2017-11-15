@@ -28,7 +28,7 @@ let health = document.getElementById("health");
 // Global variables for each frame.
 let frameWidth = 331;
 let frameHeight = 360;
-let player1 = document.querySelector('.player1');
+let player2 = document.querySelector('.player2');
 
 
 function animeRight() {
@@ -42,8 +42,8 @@ function runRight() {
     console.log(frameRunRight);
     frameRunRight++;
     spritex = spritex + 25;
-    player1.style.marginRight = 45.75 + spritex + 25;
-    player1.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
+    player2.style.marginRight = 45.75 + spritex + 25;
+    player2.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
   }
   setTimeout(runRight, 100);
 }
@@ -60,7 +60,7 @@ function punchRight() {
   if (framePunchRight <= 19) {
     console.log(framePunchRight);
     framePunchRight++;
-    player1.style.backgroundPosition = (framePunchRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (framePunchRight * frameWidth) + 'px';
   }
   setTimeout(punchRight, 100);
 }
@@ -77,7 +77,7 @@ function lookRight() {
   if (frameLookRight <= 26) {
     console.log(frameLookRight);
     frameLookRight++;
-    player1.style.backgroundPosition = (frameLookRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameLookRight * frameWidth) + 'px';
   }
   setTimeout(lookRight, 100);
 }
@@ -95,7 +95,7 @@ function fallRight() {
   if (frameFallRight <= 33) {
     console.log(frameFallRight);
     frameFallRight++;
-    player1.style.backgroundPosition = (frameFallRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameFallRight * frameWidth) + 'px';
   }
   setTimeout(fallRight, 100);
 }
@@ -112,7 +112,7 @@ function getupRight() {
   if (frameGetupRight <= 40) {
     console.log(frameGetupRight);
     frameGetupRight++;
-    player1.style.backgroundPosition = (frameGetupRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameGetupRight * frameWidth) + 'px';
   }
   setTimeout(getupRight, 100);
 }
@@ -129,7 +129,7 @@ function kickRight() {
   if (frameKickRight <= 47) {
     console.log(frameKickRight);
     frameKickRight++;
-    player1.style.backgroundPosition = (frameKickRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameKickRight * frameWidth) + 'px';
   }
   setTimeout(kickRight, 100);
 }
@@ -146,7 +146,7 @@ function shrugRight() {
   if (frameShrugRight <= 55) {
     console.log(frameShrugRight);
     frameShrugRight++;
-    player1.style.backgroundPosition = (frameShrugRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameShrugRight * frameWidth) + 'px';
   }
   setTimeout(shrugRight, 100);
 }
@@ -166,16 +166,16 @@ function jumpRight() {
 
   if (frameJumpRight > 59 && frameJumpRight < 63) {
     spritex = spritex + 15;
-    player1.style.marginRight = 45.75 + spritex + 15;
+    player2.style.marginRight = 45.75 + spritex + 15;
     // spritey = spritey - 15;
     // player1.style.marginBottom = spritey - 15;
   } else if (frameJumpRight > 62 && frameJumpRight < 65) {
     spritex = spritex + 75;
-    player1.style.marginRight = 45.75 + spritex + 75;
+    player2.style.marginRight = 45.75 + spritex + 75;
     spritey = spritey + 100;
-    player1.style.marginBottom = spritey + 100;
+    player2.style.marginBottom = spritey + 100;
   }
-    player1.style.backgroundPosition = (frameJumpRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameJumpRight * frameWidth) + 'px';
   }
   setTimeout(jumpRight, 100);
 }
@@ -193,7 +193,7 @@ function cheerRight() {
   if (frameCheerRight <= 75) {
     console.log(frameCheerRight);
     frameCheerRight++;
-    player1.style.backgroundPosition = (frameCheerRight * frameWidth) + 'px';
+    player2.style.backgroundPosition = (frameCheerRight * frameWidth) + 'px';
   }
   setTimeout(cheerRight, 100);
 }

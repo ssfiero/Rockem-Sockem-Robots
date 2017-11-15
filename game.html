@@ -15,7 +15,13 @@
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center">Rock'em Sock'em</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
+        <li><a href="index.html">Select Players</a></li>
+        <li><a href="background.html">Select Backgrounds</a></li>
+        <li><a href="game.html">Start Game</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
         <li><a href="index.html">Select Players</a></li>
         <li><a href="background.html">Select Backgrounds</a></li>
         <li><a href="game.html">Start Game</a></li>
@@ -25,16 +31,16 @@
 
 
   <section class="playerInfo">
-    <div class="compStats">
-      <h2>Computer</h2>
-      <div class="progress healthComp">
+    <div class="play1Stats">
+      <h2>Player 1</h2>
+      <div class="progress healthPlay1">
          <div class="determinate" style="width: 70%"></div>
       </div>
     </div>
 
-    <div class="play1Stats">
-      <h2>Player 1</h2>
-      <div class="progress healthPlay1">
+    <div class="play2Stats">
+      <h2>Player 2</h2>
+      <div class="progress healthPlay2">
         <div class="determinate" style="width: 70%"></div>
       </div>
     </div>
@@ -42,10 +48,10 @@
 
 
   <section class="players">
-    <div class="compPlayer">
+    <div class="player1">
     </div>
 
-    <div class="player1">
+    <div class="player2">
     </div>
   </section>
 
@@ -85,13 +91,6 @@
     </div>
   </section>
 
-
-
-
-
-
-
-  <!-- <body onload='interval()'> -->
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

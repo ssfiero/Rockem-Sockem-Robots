@@ -1,14 +1,17 @@
 $(document).ready(function() {
 
 
-// ------------ Carousel ------------- //
+  // ------------ Side Navbar ------------- //
+$(".button-collapse").sideNav();
 
+
+
+// ------------ Carousel ------------- //
  $('.carousel').carousel();
 
 
 
 // ---------- API server requests --------- //
-
 setInterval(function apicall() {
 let quotes = {};
 

@@ -28,7 +28,7 @@ let health = document.getElementById("health");
 // Global variables for each frame.
 let frameWidth = 331;
 let frameHeight = 360;
-let compPlayer = document.querySelector('.compPlayer');
+let player1 = document.querySelector('.player1');
 
 
 function animeLeft() {
@@ -42,8 +42,8 @@ function runLeft() {
     console.log(frameRunLeft);
     frameRunLeft--;
     spritex = spritex + 25;
-    compPlayer.style.marginLeft = 45.75 + spritex + 25;
-    compPlayer.style.backgroundPosition = (frameRunLeft * frameWidth) + 'px';
+    player1.style.marginLeft = 45.75 + spritex + 25;
+    player1.style.backgroundPosition = (frameRunLeft * frameWidth) + 'px';
   }
   setTimeout(runLeft, 100);
 }
@@ -60,7 +60,7 @@ function punchLeft() {
   if (framePunchLeft >= -19) {
     console.log(framePunchLeft);
     framePunchLeft--;
-    compPlayer.style.backgroundPosition = (framePunchLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (framePunchLeft * frameWidth) + 'px';
   }
   setTimeout(punchLeft, 100);
 }
@@ -77,7 +77,7 @@ function lookLeft() {
   if (frameLookLeft >= -26) {
     console.log(frameLookLeft);
     frameLookLeft--;
-    compPlayer.style.backgroundPosition = (frameLookLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameLookLeft * frameWidth) + 'px';
   }
   setTimeout(lookLeft, 100);
 }
@@ -95,7 +95,7 @@ function fallLeft() {
   if (frameFallLeft >= -33) {
     console.log(frameFallLeft);
     frameFallLeft--;
-    compPlayer.style.backgroundPosition = (frameFallLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameFallLeft * frameWidth) + 'px';
   }
   setTimeout(fallLeft, 100);
 }
@@ -112,7 +112,7 @@ function getupLeft() {
   if (frameGetupLeft >= -40) {
     console.log(frameGetupLeft);
     frameGetupLeft--;
-    compPlayer.style.backgroundPosition = (frameGetupLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameGetupLeft * frameWidth) + 'px';
   }
   setTimeout(getupLeft, 100);
 }
@@ -129,7 +129,7 @@ function kickLeft() {
   if (frameKickLeft >= -47) {
     console.log(frameKickLeft);
     frameKickLeft--;
-    compPlayer.style.backgroundPosition = (frameKickLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameKickLeft * frameWidth) + 'px';
   }
   setTimeout(kickLeft, 100);
 }
@@ -146,7 +146,7 @@ function shrugLeft() {
   if (frameShrugLeft >= -55) {
     console.log(frameShrugLeft);
     frameShrugLeft--;
-    compPlayer.style.backgroundPosition = (frameShrugLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameShrugLeft * frameWidth) + 'px';
   }
   setTimeout(shrugLeft, 100);
 }
@@ -167,16 +167,16 @@ function jumpLeft() {
 
     if (frameJumpLeft < -59 && frameJumpLeft > -63) {
       spritex = spritex + 15;
-      compPlayer.style.marginLeft = 45.75 + spritex + 15;
+      player1.style.marginLeft = 45.75 + spritex + 15;
       spritey = spritey - 15;
-      compPlayer.style.marginBottom = spritey - 15;
+      player1.style.marginBottom = spritey - 15;
     } else if (frameJumpLeft < -62 && frameJumpLeft > -65) {
       spritex = spritex + 50;
-      compPlayer.style.marginLeft = 45.75 + spritex + 50;
+      player1.style.marginLeft = 45.75 + spritex + 50;
       spritey = spritey + 100;
-      compPlayer.style.marginBottom = spritey + 100;
+      player1.style.marginBottom = spritey + 100;
     }
-    compPlayer.style.backgroundPosition = (frameJumpLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameJumpLeft * frameWidth) + 'px';
   }
   setTimeout(jumpLeft, 100);
 }
@@ -193,7 +193,7 @@ function cheerLeft() {
   if (frameCheerLeft >= -75) {
     console.log(frameCheerLeft);
     frameCheerLeft--;
-    compPlayer.style.backgroundPosition = (frameCheerLeft * frameWidth) + 'px';
+    player1.style.backgroundPosition = (frameCheerLeft * frameWidth) + 'px';
   }
   setTimeout(cheerLeft, 100);
 }
