@@ -184,6 +184,39 @@ $xhr.fail(function(err) {
 
 
 
+// ------------------ Collision Detection -------------------- //
+
+
+let player1 = document.querySelector('.player1');
+let player2 = document.querySelector('.player2');
+// // console.log(typeof player1);
+// $('player1').width;
+// console.log($('player1').width);
+
+// let playUno = document.querySelector('.player1').width;
+// let playDos = document.querySelector('.player2').width;
+//
+// console.log(playUno);
+// console.log(playDos);
+//
+// let collision = function isCollide(playUno, playDos) {
+//   if ( ((playUno - playDos) < 200) || ((playDos - playUno) < 200) ) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// ((player1.x + player1.width) < player2.x) ||
+// (player1.x > (player2.x + player2.width))
+// ((player1.x - player2.x) < 200) ||
+// ((player2.x - player1.x) < 200)
+
+
+
+
+
+
 // ------------------ Health Bars -------------------- //
 
 
@@ -192,11 +225,6 @@ let countL = 0;
 let buttonPL = document.getElementById("punchL");
 let displayPR = document.getElementById("displayCountPR");
 let healthRight = document.getElementById("hr");
-// let play1Pos = player1.position();
-// let leftPos = play1Pos.left;
-//
-// let play2Pos = player2.position();
-// let leftPos = play2Pos.left;
 
 
 $('body').on('keydown', function(e){
@@ -300,7 +328,7 @@ $('body').on('keydown', function(e){
 // Global variables for each frame.
 let frameWidth = 331;
 let frameHeight = 360;
-let player1 = document.querySelector('.player1');
+// let player1 = document.querySelector('.player1');
 
 
 function animeLeft() {
@@ -534,7 +562,7 @@ setInterval(animeLeft, 1500);
 // Global variables for each frame.
 // let frameWidth = 331;
 // let frameHeight = 360;
-let player2 = document.querySelector('.player2');
+// let player2 = document.querySelector('.player2');
 
 
 function animeRight() {
