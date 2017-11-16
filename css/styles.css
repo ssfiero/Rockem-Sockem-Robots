@@ -23,6 +23,7 @@ Landing page
   margin: 40px 0px;
 }
 
+
 /*=========================
 Navbar
 =========================*/
@@ -214,6 +215,28 @@ Game page - Player Info
   display: block;
 }
 
+.material-icons {
+  cursor: pointer;
+  float: right;
+  font-size: 16px;
+  line-height: 32px;
+  /*padding-left: 8px;*/
+}
+
+#chiLef {
+  margin-left: 50px;
+}
+
+#chiRig {
+  float: right;
+  margin-right: 50px;
+}
+
+.chip {
+  background-color: maroon;
+  color: white;
+}
+
 
 /*=========================
 Game Page - Quotes
@@ -290,7 +313,7 @@ Winner Page
   background-image: url("/png/backgrounds/city.jpg");
   background-size: cover;
   background-position: center;
-  height: 590px;
+  height: 560px;
   padding-top: 100px;
 }
 
@@ -314,7 +337,12 @@ Winner Page
 
 .buttonsRightBottom {
   background-color: #303030;
-  height: 150px;
+  height: 180px;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 30px;
+}
+
+.winBut {
+  text-align: center;
+  margin-top: 5px;
 }
