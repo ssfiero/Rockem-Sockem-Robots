@@ -2,6 +2,26 @@ body {
   background-color: #f7f8fa;
 }
 
+/*=========================
+Landing page
+=========================*/
+
+#landing-page {
+  height: 804px;
+  background-color: #f8f2e9;
+  text-align: center;
+}
+
+.summary h2 {
+  text-align: center;
+  padding: 100px 0px;
+  margin: 0px;
+}
+
+.summary h4 {
+  text-align: center;
+  margin: 40px 0px;
+}
 
 /*=========================
 Navbar
@@ -39,9 +59,14 @@ Carousel
   height: 804px;
 }
 
+.carSec {
+  background-color: slategrey;
+  height: 740px;
+}
+
 .carSec .carousel {
   background-color: slategrey;
-  width: 50%;
+  width: 47%;
   height: 740px;
   overflow: hidden;
 }
@@ -74,6 +99,11 @@ Carousel
   color: maroon;
 }
 
+#playSelBut {
+  text-align: center !important;
+  margin-top: 600px;
+}
+
 
 /*=========================
 Slider
@@ -84,12 +114,12 @@ Slider
 }
 
 .slider {
-  height: 550px !important;
+  height: 520px !important;
   margin-bottom: 0px;
 }
 
 .slider .slides li {
-  height: 510px !important;
+  height: 480px !important;
 }
 
 .slider .indicators .indicator-item.active {
@@ -102,7 +132,7 @@ Slider
 
 .caption>h3 {
   font-size: 50px;
-  margin-top: 100px;
+  margin-top: 85px;
 }
 
 .caption>.btn {
@@ -110,9 +140,13 @@ Slider
   margin-left: 0px;
 }
 
+.backBut {
+  text-align: center;
+}
+
 
 /*=========================
-Game page
+Game page - Player Info
 =========================*/
 
 #game-page {
@@ -182,7 +216,7 @@ Game page
 
 
 /*=========================
-Quotes
+Game Page - Quotes
 =========================*/
 
 .quotes-container {
@@ -210,7 +244,7 @@ i.right {
 
 
 /*=========================
-Control Buttons
+Game Page - Control Buttons
 =========================*/
 
 .controlButtons {
@@ -220,14 +254,14 @@ Control Buttons
 }
 
 .buttonsLeft {
-  width: 50%;
+  width: 47%;
   text-align: center;
   padding: 10px 30px;
   float: left;
 }
 
 .buttonsRight {
-  width: 50%;
+  width: 47%;
   text-align: center;
   padding: 10px 30px;
   float: left;
@@ -236,6 +270,11 @@ Control Buttons
 .btn {
   margin: 10px 10px;
   background-color: maroon;
+}
+
+.gameBut {
+  text-align: center;
+  float: left;
 }
 
 
@@ -248,11 +287,11 @@ Winner Page
 }
 
 .winBack {
-  background-image: url("/png/backgrounds/salt-flats.jpg");
+  background-image: url("/png/backgrounds/city.jpg");
   background-size: cover;
   background-position: center;
   height: 590px;
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 .winBack h3 {

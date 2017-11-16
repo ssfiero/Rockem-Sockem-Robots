@@ -13,14 +13,41 @@
 
 <body>
 
+<!-- Landing page -->
+
+  <div id="landing-page">
+    <div class="summary">
+      <div>
+        <h2>Rock'em Sock'em</h2>
+        <p>This is a version of the 1964 Rock’em Sock’em Robots game.</p>
+      </div>
+      <div>
+        <h4>Gameplay</h4>
+        <p></p>
+      </div>
+      <div>
+        <h4>Features</h4>
+      </div>
+    </div>
+    <a id="startBut" class="btn btn-floating btn-large maroon pulse"><i class="material-icons">arrow_downward</i></a>
+
+  </div>
+
+
+
+
+
+
+
+
 <!--- Player Selection Page ----->
 
   <div id="player-select">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo" style="font-size: 16px; margin-left: 10px">Rock'em Sock'em</a>
+        <!-- <a href="#" class="brand-logo" style="font-size: 16px; margin-left: 10px">Rock'em Sock'em</a> -->
         <a class="brand-logo center">Select Your Player</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#player-select" class="nav-sel">Select Players</a></li>
           <li><a href="#background-select" class="nav-bac">Select Backgrounds</a></li>
@@ -30,7 +57,7 @@
           <li><a href="#player-select">Select Players</a></li>
           <li><a href="#background-select">Select Backgrounds</a></li>
           <li><a href="#game-page">Start Game</a></li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
 
@@ -111,6 +138,7 @@
 
       </div>
 
+      <a id="playSelBut" class="btn btn-floating btn-large maroon pulse"><i class="material-icons">arrow_downward</i></a>
 
       <!-- Right Carousel -->
       <div class="carousel right">
@@ -186,6 +214,7 @@
         </div>
 
       </div>
+
     </section>
   </div>
 
@@ -201,9 +230,9 @@
   <div id="background-select">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo" style="font-size: 16px; margin-left: 10px">Rock'em Sock'em</a>
+        <!-- <a href="#" class="brand-logo" style="font-size: 16px; margin-left: 10px">Rock'em Sock'em</a> -->
         <a href="#" class="brand-logo center">Pick Your Battleground</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#player-select">Select Players</a></li>
           <li><a href="#background-select">Select Backgrounds</a></li>
@@ -213,7 +242,7 @@
           <li><a href="#player-select">Select Players</a></li>
           <li><a href="#background-select">Select Backgrounds</a></li>
           <li><a href="#game-page">Start Game</a></li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
 
@@ -273,6 +302,9 @@
 
       </div>
     </section>
+    <div class="backBut">
+      <a id="backSelBut" class="btn btn-floating btn-large maroon pulse"><i class="material-icons">arrow_downward</i></a>
+    </div>
   </div>
 
 
@@ -287,8 +319,8 @@
   <div id="game-page">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Rock'em Sock'em</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo center">Game Action</a>
+        <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <li><a href="#player-select">Select Players</a></li>
           <li><a href="#background-select">Select Backgrounds</a></li>
@@ -298,7 +330,7 @@
           <li><a href="#player-select">Select Players</a></li>
           <li><a href="#background-select">Select Backgrounds</a></li>
           <li><a href="#game-page">Start Game</a></li>
-        </ul>
+        </ul> -->
       </div>
     </nav>
 
@@ -347,29 +379,34 @@
 
     <section class="controlButtons">
       <div class="buttonsLeft">
-        <button class="runL btn" type="button">run</button>
+        <!-- <button class="runL btn" type="button">run</button> -->
         <button class="punchL btn" type="button" value="count" id="punchL">punch</button>
+        <button class="kickL btn" type="button" value="count" id="kickL">kick</button>
+        <button class="jumpL btn" type="button">jump</button>
         <button class="lookL btn" type="button">look around</button>
         <button class="fallL btn" type="button">fall</button>
         <button class="getupL btn" type="button">get up</button>
-        <button class="kickL btn" type="button" value="count" id="kickL">kick</button>
         <button class="shrugL btn" type="button">shrug</button>
-        <button class="jumpL btn" type="button">jump</button>
-        <button class="cheerL btn" type="button">cheer</button>
+        <!-- <button class="cheerL btn" type="button">cheer</button> -->
+      </div>
+
+      <div class="gameBut">
+        <a id="gameSelBut" class="btn btn-floating btn-large maroon pulse"><i class="material-icons">arrow_downward</i></a>
       </div>
 
       <div class="buttonsRight">
-        <button class="runR btn" type="button">run</button>
+        <!-- <button class="runR btn" type="button">run</button> -->
         <button class="punchR btn" type="button" value="count" id="punchR">punch</button>
+        <button class="kickR btn" type="button" value="count" id="kickR">kick</button>
+        <button class="jumpR btn" type="button">jump</button>
         <button class="lookR btn" type="button">look around</button>
         <button class="fallR btn" type="button">fall</button>
         <button class="getupR btn" type="button">get up</button>
-        <button class="kickR btn" type="button" value="count" id="kickR">kick</button>
         <button class="shrugR btn" type="button">shrug</button>
-        <button class="jumpR btn" type="button">jump</button>
-        <button class="cheerR btn" type="button">cheer</button>
+        <!-- <button class="cheerR btn" type="button">cheer</button> -->
       </div>
     </section>
+
   </div>
 
 
@@ -380,17 +417,13 @@
       <nav>
         <div class="nav-wrapper">
           <a href="#" class="brand-logo center">Rock'em Sock'em</a>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#player-select">Select Players</a></li>
-            <li><a href="#background-select">Select Backgrounds</a></li>
-            <li><a href="#game-page">Start Game</a></li>
+          <!-- <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="startOver" class="right hide-on-med-and-down">
+            <li><a href="#player-select">Start New Game</a></li>
           </ul>
           <ul class="side-nav" id="mobile-demo">
-            <li><a href="#player-select">Select Players</a></li>
-            <li><a href="#background-select">Select Backgrounds</a></li>
-            <li><a href="#game-page">Start Game</a></li>
-          </ul>
+            <li><a href="#player-select">Start New Game</a></li>
+          </ul> -->
         </div>
       </nav>
 

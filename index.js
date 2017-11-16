@@ -1,5 +1,43 @@
 $(document).ready(function() {
 
+
+// ------------- Scrolling ------------------ //
+
+$("#startBut").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#player-select").offset().top
+  });
+});
+
+
+$("#playSelBut").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#background-select").offset().top
+  });
+});
+
+
+$("#backSelBut").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#game-page").offset().top
+  });
+});
+
+
+$("#gameSelBut").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#winner-page").offset().top
+  });
+});
+
+
+$("#startOver").click(function() {
+  $('html, body').animate({
+    scrollTop: $("#landing-page").offset().top
+  });
+});
+
+
 // ----------- Initial game state ------------------ //
 // $('#background-select').hide();
 // $('#game-page').hide();
@@ -7,23 +45,23 @@ $(document).ready(function() {
 
 // ----------- Navbar ------------------ //
 
-$('.nav-sel').click(function() {
-  ('#player-select').removeClass('hide');
-  $('#background-select').addClass('hide');
-  $('#game-page').addClass('hide');
-})
-
-$('.nav-bac').click(function() {
-  $('#player-select').addClass('hide');
-  $('#background-select').removeClass('hide');
-  $('#game-page').addClass('hide');
-})
-
-$('.nav-gam').click(function() {
-  $('#player-select').addClass('hide');
-  $('#background-select').addClass('hide');
-  $('#game-page').removeClass('hide');
-})
+// $('.nav-sel').click(function() {
+//   $('#player-select').removeClass('hide');
+//   $('#background-select').addClass('hide');
+//   $('#game-page').addClass('hide');
+// })
+//
+// $('.nav-bac').click(function() {
+//   $('#player-select').addClass('hide');
+//   $('#background-select').removeClass('hide');
+//   $('#game-page').addClass('hide');
+// })
+//
+// $('.nav-gam').click(function() {
+//   $('#player-select').addClass('hide');
+//   $('#background-select').addClass('hide');
+//   $('#game-page').removeClass('hide');
+// })
 
 
 
@@ -393,19 +431,21 @@ btnJump.addEventListener('click', jumpLeft);
 
 
 // Left player cheer
-let frameCheerLeft = -67;
+// let frameCheerLeft = -67;
+//
+// function cheerLeft() {
+//   if (frameCheerLeft >= -75) {
+//     // console.log(frameCheerLeft);
+//     frameCheerLeft--;
+//     player1.style.backgroundPosition = (frameCheerLeft * frameWidth) + 'px';
+//   }
+//   setTimeout(cheerLeft, 100);
+// }
+//
+// let btnCheer = document.querySelector('.cheerL');
+// btnCheer.addEventListener('click', cheerLeft);
 
-function cheerLeft() {
-  if (frameCheerLeft >= -75) {
-    // console.log(frameCheerLeft);
-    frameCheerLeft--;
-    player1.style.backgroundPosition = (frameCheerLeft * frameWidth) + 'px';
-  }
-  setTimeout(cheerLeft, 100);
-}
 
-let btnCheer = document.querySelector('.cheerL');
-btnCheer.addEventListener('click', cheerLeft);
 
 }
 
