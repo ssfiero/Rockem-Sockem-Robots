@@ -196,8 +196,12 @@ let healthRight = document.getElementById("hr");
 buttonPL.onclick = function(){
   countR++;
   displayPR.innerHTML = countR;
-  healthRight.style.width = $(this).width() / 1.1;
+  // console.log(healthRight.style.width);
+  healthRight.style.width = 400 - (countR * 50);
+  // console.log(healthRight.style.width);
+  // console.log(countR);
 }
+
 
 // Left Kick
 let buttonKL = document.getElementById("kickL");
@@ -206,7 +210,7 @@ let displayKR = document.getElementById("displayCountKR");
 buttonKL.onclick = function(){
   countR++;
   displayKR.innerHTML = countR;
-  healthRight.style.width = $(this).width() / 1.1;
+  healthRight.style.width = 400 - (countR * 50);;
 }
 
 
@@ -220,7 +224,7 @@ let healthLeft = document.getElementById("hl");
 buttonPR.onclick = function(){
   countL++;
   displayPL.innerHTML = countL;
-  healthLeft.style.width = $(this).width() / 1.1;
+  healthLeft.style.width = 400 - (countL * 50);;
 }
 
 // Right Kick
@@ -230,7 +234,7 @@ let displayKL = document.getElementById("displayCountKL");
 buttonKR.onclick = function(){
   countL++;
   displayKL.innerHTML = countL;
-  healthLeft.style.width = $(this).width() / 1.1;
+  healthLeft.style.width = 400 - (countL * 50);;
 }
 
 
