@@ -53,9 +53,9 @@ function setBack() {
 
   if ( $('.li').hasClass('active')) {
     let battle = document.getElementById('battleground');
-    console.log(battle);
+    // console.log(battle);
     battle.style.backgroundImage = $(this).style.backgroundImage;
-    console.log(battle.style.backgroundImage);
+    // console.log(battle.style.backgroundImage);
   }
 
 
@@ -81,7 +81,7 @@ $('.slider').slider();
   let quotes = {};
 
   let $xhr = $.getJSON('http://api.icndb.com/jokes/random?escape=javascript');
-  console.log('API data returned:', $xhr);
+  // console.log('API data returned:', $xhr);
 
   // Retreive data from server.
   $xhr.done(function apicall(data) {
@@ -112,7 +112,7 @@ let secondCall = setInterval(function(){
   let quotes = {};
 
   let $xhr = $.getJSON('http://api.icndb.com/jokes/random?escape=javascript');
-  console.log('API data returned:', $xhr);
+  // console.log('API data returned:', $xhr);
 
   // Retreive data from server.
   $xhr.done(function apicall(data) {
@@ -148,29 +148,52 @@ $xhr.fail(function(err) {
 
 // ------------------ Health Bars -------------------- //
 
-let healthLeft = document.getElementById("healthPlay1");
+
+// Left Punch
+let countL = 0;
+let buttonPL = document.getElementById("punchL");
+let displayPR = document.getElementById("displayCountPR");
+let healthRight = document.getElementById("hr");
+
+buttonPL.onclick = function(){
+  countR++;
+  displayPR.innerHTML = countR;
+  healthRight.style.width = $(this).width() / 1.1;
+}
+
+// Left Kick
+let buttonKL = document.getElementById("kickL");
+let displayKR = document.getElementById("displayCountKR");
+
+buttonKL.onclick = function(){
+  countR++;
+  displayKR.innerHTML = countR;
+  healthRight.style.width = $(this).width() / 1.1;
+}
 
 
-// health.value -= 10;
+// ----------------
+// Right Punch
+let countR = 0;
+let buttonPR = document.getElementById("punchR");
+let displayPL = document.getElementById("displayCountPL");
+let healthLeft = document.getElementById("hl");
 
-let leftPunchCount = 0;
+buttonPR.onclick = function(){
+  countL++;
+  displayPL.innerHTML = countL;
+  healthLeft.style.width = $(this).width() / 1.1;
+}
 
-// function lp() {
-//   runLeft();
-//   leftPunchCount++;
-//   console.log(leftPunchCount);
-//   let lpc = leftPunchCount -7;
-//   console.log(lpc);
-// }
+// Right Kick
+let buttonKR = document.getElementById("kickR");
+let displayKL = document.getElementById("displayCountKL");
 
-
-let healthRight = document.getElementById("healthPlay2");
-// health.value -= 10;
-
-
-
-// -------------- Left and Right Movement Section ----------------//
-
+buttonKR.onclick = function(){
+  countL++;
+  displayKL.innerHTML = countL;
+  healthLeft.style.width = $(this).width() / 1.1;
+}
 
 
 
@@ -201,7 +224,6 @@ function animeLeft() {
 
 // // Left player run
 // let frameRunLeft = 0;
-// let spritex = 0;
 //
 // function runLeft() {
 //   if (frameRunLeft >= -11) {
@@ -238,14 +260,12 @@ $(document).keydown(function(e) {
 let framePunchLeft = -12;
 
 function punchLeft() {
+  $(this).data('clicked', true);
   if (framePunchLeft >= -19) {
-    console.log(framePunchLeft);
+    // console.log(framePunchLeft);
     framePunchLeft--;
     player1.style.backgroundPosition = (framePunchLeft * frameWidth) + 'px';
   }
-  // leftPunchCount++;
-  // console.log(leftPunchCount);
-
   setTimeout(punchLeft, 100);
 }
 
@@ -254,12 +274,13 @@ btnPunch.addEventListener('click', punchLeft);
 
 
 
+
 // Left player look around
 let frameLookLeft = -20;
 
 function lookLeft() {
   if (frameLookLeft >= -26) {
-    console.log(frameLookLeft);
+    // console.log(frameLookLeft);
     frameLookLeft--;
     player1.style.backgroundPosition = (frameLookLeft * frameWidth) + 'px';
   }
@@ -277,7 +298,7 @@ let frameFallLeft = -27;
 
 function fallLeft() {
   if (frameFallLeft >= -33) {
-    console.log(frameFallLeft);
+    // console.log(frameFallLeft);
     frameFallLeft--;
     player1.style.backgroundPosition = (frameFallLeft * frameWidth) + 'px';
   }
@@ -294,7 +315,7 @@ let frameGetupLeft = -34;
 
 function getupLeft() {
   if (frameGetupLeft >= -40) {
-    console.log(frameGetupLeft);
+    // console.log(frameGetupLeft);
     frameGetupLeft--;
     player1.style.backgroundPosition = (frameGetupLeft * frameWidth) + 'px';
   }
@@ -311,7 +332,7 @@ let frameKickLeft = -41;
 
 function kickLeft() {
   if (frameKickLeft >= -47) {
-    console.log(frameKickLeft);
+    // console.log(frameKickLeft);
     frameKickLeft--;
     player1.style.backgroundPosition = (frameKickLeft * frameWidth) + 'px';
   }
@@ -328,7 +349,7 @@ let frameShrugLeft = -48;
 
 function shrugLeft() {
   if (frameShrugLeft >= -55) {
-    console.log(frameShrugLeft);
+    // console.log(frameShrugLeft);
     frameShrugLeft--;
     player1.style.backgroundPosition = (frameShrugLeft * frameWidth) + 'px';
   }
@@ -342,11 +363,12 @@ btnShrug.addEventListener('click', shrugLeft);
 
 // Left player jump
 let frameJumpLeft = -56;
+let spritex = 0;
 let spritey = 0;
 
 function jumpLeft() {
   if (frameJumpLeft >= -66) {
-    console.log(frameJumpLeft);
+    // console.log(frameJumpLeft);
     frameJumpLeft--;
 
     if (frameJumpLeft < -59 && frameJumpLeft > -63) {
@@ -355,8 +377,8 @@ function jumpLeft() {
       spritey = spritey - 15;
       player1.style.marginBottom = spritey - 15;
     } else if (frameJumpLeft < -62 && frameJumpLeft > -65) {
-      spritex = spritex + 150;
-      player1.style.marginLeft = 45.75 + spritex + 150;
+      spritex = spritex + 125;
+      player1.style.marginLeft = 45.75 + spritex + 125;
       spritey = spritey + 100;
       player1.style.marginBottom = spritey + 100;
     }
@@ -375,7 +397,7 @@ let frameCheerLeft = -67;
 
 function cheerLeft() {
   if (frameCheerLeft >= -75) {
-    console.log(frameCheerLeft);
+    // console.log(frameCheerLeft);
     frameCheerLeft--;
     player1.style.backgroundPosition = (frameCheerLeft * frameWidth) + 'px';
   }
@@ -426,7 +448,6 @@ function animeRight() {
 
 // // Right player run
 // let frameRunRight = 0;
-// let spritex = 0;
 //
 // function runRight() {
 //   if (frameRunRight <= 11) {
@@ -463,7 +484,7 @@ let framePunchRight = 12;
 
 function punchRight() {
   if (framePunchRight <= 19) {
-    console.log(framePunchRight);
+    // console.log(framePunchRight);
     framePunchRight++;
     player2.style.backgroundPosition = (framePunchRight * frameWidth) + 'px';
   }
@@ -480,7 +501,7 @@ let frameLookRight = 20;
 
 function lookRight() {
   if (frameLookRight <= 26) {
-    console.log(frameLookRight);
+    // console.log(frameLookRight);
     frameLookRight++;
     player2.style.backgroundPosition = (frameLookRight * frameWidth) + 'px';
   }
@@ -498,7 +519,7 @@ let frameFallRight = 27;
 
 function fallRight() {
   if (frameFallRight <= 33) {
-    console.log(frameFallRight);
+    // console.log(frameFallRight);
     frameFallRight++;
     player2.style.backgroundPosition = (frameFallRight * frameWidth) + 'px';
   }
@@ -515,7 +536,7 @@ let frameGetupRight = 34;
 
 function getupRight() {
   if (frameGetupRight <= 40) {
-    console.log(frameGetupRight);
+    // console.log(frameGetupRight);
     frameGetupRight++;
     player2.style.backgroundPosition = (frameGetupRight * frameWidth) + 'px';
   }
@@ -532,7 +553,7 @@ let frameKickRight = 41;
 
 function kickRight() {
   if (frameKickRight <= 47) {
-    console.log(frameKickRight);
+    // console.log(frameKickRight);
     frameKickRight++;
     player2.style.backgroundPosition = (frameKickRight * frameWidth) + 'px';
   }
@@ -549,7 +570,7 @@ let frameShrugRight = 48;
 
 function shrugRight() {
   if (frameShrugRight <= 55) {
-    console.log(frameShrugRight);
+    // console.log(frameShrugRight);
     frameShrugRight++;
     player2.style.backgroundPosition = (frameShrugRight * frameWidth) + 'px';
   }
@@ -560,13 +581,14 @@ let btnShrug = document.querySelector('.shrugR');
 btnShrug.addEventListener('click', shrugRight);
 
 
+let spritex = 0;
 
 // Right player jump
 let frameJumpRight = 56;
 
 function jumpRight() {
   if (frameJumpRight <= 66) {
-    console.log(frameJumpRight);
+    // console.log(frameJumpRight);
   frameJumpRight++;
 
   if (frameJumpRight > 59 && frameJumpRight < 63) {
@@ -575,8 +597,8 @@ function jumpRight() {
     // spritey = spritey - 15;
     // player1.style.marginBottom = spritey - 15;
   } else if (frameJumpRight > 62 && frameJumpRight < 65) {
-    spritex = spritex + 175;
-    player2.style.marginRight = 45.75 + spritex + 175;
+    spritex = spritex + 150;
+    player2.style.marginRight = 45.75 + spritex + 150;
     spritey = spritey + 100;
     player2.style.marginBottom = spritey + 100;
   }
@@ -596,7 +618,7 @@ let spritey = 0;
 
 function cheerRight() {
   if (frameCheerRight <= 75) {
-    console.log(frameCheerRight);
+    // console.log(frameCheerRight);
     frameCheerRight++;
     player2.style.backgroundPosition = (frameCheerRight * frameWidth) + 'px';
   }

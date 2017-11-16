@@ -237,3 +237,45 @@ Control Buttons
   margin: 10px 10px;
   background-color: maroon;
 }
+
+
+/*=========================
+Winner Page
+=========================*/
+
+#winner-page {
+  height: 804px;
+}
+
+.winBack {
+  background-image: url("/png/backgrounds/salt-flats.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 590px;
+  padding-top: 60px;
+}
+
+.winBack h3 {
+  text-align: center;
+  color: maroon;
+  font-size: 50px;
+}
+
+.winPlayer {
+  height: 360px;
+  width: 330px;
+  background-image: url("/png/yeti-right.png");
+  /*float: left;*/
+  margin: auto;
+  /*position: absolute;*/
+  margin-right: 25px;
+  display: block;
+  margin: auto;
+}
+
+.buttonsRightBottom {
+  background-color: #303030;
+  height: 150px;
+  text-align: center;
+  padding-top: 50px;
+}

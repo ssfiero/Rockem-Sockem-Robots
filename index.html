@@ -308,15 +308,21 @@
         <div class="play1Stats">
           <h2>Player 1</h2>
           <div class="progress healthPlay1">
-             <div class="determinate" style="width: 70%"></div>
+             <div class="determinate" id="hl" style="width: 100%"></div>
           </div>
+          <span>Hits</span>
+          <span id="displayCountPL">0</span>
+          <span id="displayCountKL">0</span>
         </div>
 
         <div class="play2Stats">
           <h2>Player 2</h2>
           <div class="progress healthPlay2">
-            <div class="determinate" style="width: 70%"></div>
+            <div class="determinate" id="hr" style="width: 100%"></div>
           </div>
+          <span>Hits</span>
+          <span id="displayCountPR">0</span>
+          <span id="displayCountKR">0</span>
         </div>
       </div>
 
@@ -342,11 +348,11 @@
     <section class="controlButtons">
       <div class="buttonsLeft">
         <button class="runL btn" type="button">run</button>
-        <button class="punchL btn" type="button">punch</button>
+        <button class="punchL btn" type="button" value="count" id="punchL">punch</button>
         <button class="lookL btn" type="button">look around</button>
         <button class="fallL btn" type="button">fall</button>
         <button class="getupL btn" type="button">get up</button>
-        <button class="kickL btn" type="button">kick</button>
+        <button class="kickL btn" type="button" value="count" id="kickL">kick</button>
         <button class="shrugL btn" type="button">shrug</button>
         <button class="jumpL btn" type="button">jump</button>
         <button class="cheerL btn" type="button">cheer</button>
@@ -354,17 +360,58 @@
 
       <div class="buttonsRight">
         <button class="runR btn" type="button">run</button>
-        <button class="punchR btn" type="button">punch</button>
+        <button class="punchR btn" type="button" value="count" id="punchR">punch</button>
         <button class="lookR btn" type="button">look around</button>
         <button class="fallR btn" type="button">fall</button>
         <button class="getupR btn" type="button">get up</button>
-        <button class="kickR btn" type="button">kick</button>
+        <button class="kickR btn" type="button" value="count" id="kickR">kick</button>
         <button class="shrugR btn" type="button">shrug</button>
         <button class="jumpR btn" type="button">jump</button>
         <button class="cheerR btn" type="button">cheer</button>
       </div>
     </section>
   </div>
+
+
+
+  <!-- Winner page -->
+
+    <div id="winner-page">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Rock'em Sock'em</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#player-select">Select Players</a></li>
+            <li><a href="#background-select">Select Backgrounds</a></li>
+            <li><a href="#game-page">Start Game</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#player-select">Select Players</a></li>
+            <li><a href="#background-select">Select Backgrounds</a></li>
+            <li><a href="#game-page">Start Game</a></li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div class="winBack">
+        <h3>Player 2 is the winner!!</h3>
+        <div class="winPlayer">
+
+        </div>
+      </div>
+
+      <div class="buttonsRightBottom">
+        <button class="runR btn" type="button">run</button>
+        <button class="lookR btn" type="button">look around</button>
+        <button class="fallR btn" type="button">fall</button>
+        <button class="getupR btn" type="button">get up</button>
+        <button class="shrugR btn" type="button">shrug</button>
+        <button class="jumpR btn" type="button">jump</button>
+        <button class="cheerR btn" type="button">cheer</button>
+      </div>
+    </div>
 
 
 
