@@ -6,22 +6,23 @@ $(document).ready(function() {
 
 
 // ----------- Navbar ------------------ //
+
 $('.nav-sel').click(function() {
-  ('#player-select').addClass('show').css('display', 'content').removeClass('hide');
+  ('#player-select').removeClass('hide');
   $('#background-select').addClass('hide');
   $('#game-page').addClass('hide');
 })
 
 $('.nav-bac').click(function() {
   $('#player-select').addClass('hide');
-  $('#background-select').addClass('show').css('display', 'content').removeClass('hide');
+  $('#background-select').removeClass('hide');
   $('#game-page').addClass('hide');
 })
 
 $('.nav-gam').click(function() {
   $('#player-select').addClass('hide');
   $('#background-select').addClass('hide');
-  $('#game-page').addClass('show').css('display', 'content').removeClass('hide');
+  $('#game-page').removeClass('hide');
 })
 
 
@@ -38,11 +39,28 @@ $('.carousel').carousel();
 
 
 function setBack() {
-  let battle = document.getElementById('battleground');
-  console.log(battle);
-  battle.style.backgroundImage = "url('/png/backgrounds/pyramids.jpg')";
+  // let battle = document.getElementById('battleground');
+  // console.log(battle);
+  // battle.style.backgroundImage = "url('/png/backgrounds/pyramids.jpg')";
   // battle.style.backgroundImage = event.target.backgroundImage;
-  console.log(battle);
+
+  // if ( $('.li').hasClass('active')) {
+  //   let battle = document.getElementById('battleground');
+  //   console.log(battle);
+  //   battle.style.backgroundImage = $(this).style.backgroundImage;
+  //   console.log(battle.style.backgroundImage);
+  // }
+
+  if ( $('.li').hasClass('active')) {
+    let battle = document.getElementById('battleground');
+    console.log(battle);
+    battle.style.backgroundImage = $(this).style.backgroundImage;
+    console.log(battle.style.backgroundImage);
+  }
+
+
+
+
 }
 
 let backButton = document.getElementById('background-select');
@@ -128,6 +146,31 @@ $xhr.fail(function(err) {
 
 
 
+// ------------------ Health Bars -------------------- //
+
+let healthLeft = document.getElementById("healthPlay1");
+
+
+// health.value -= 10;
+
+let leftPunchCount = 0;
+
+// function lp() {
+//   runLeft();
+//   leftPunchCount++;
+//   console.log(leftPunchCount);
+//   let lpc = leftPunchCount -7;
+//   console.log(lpc);
+// }
+
+
+let healthRight = document.getElementById("healthPlay2");
+// health.value -= 10;
+
+
+
+// -------------- Left and Right Movement Section ----------------//
+
 
 
 
@@ -135,15 +178,6 @@ $xhr.fail(function(err) {
 // -------------- Left Player Action Section ----------------//
 
 
-// ------------------ Health Bar -------------------- //
-
-let healthLeft = document.getElementById("healthLeft");
-// health.value -= 10;
-
-
-
-
-//------------------- Left Player ------------------ //
 
 // Specific frames for each action.
 // run = 0 - 11
@@ -165,23 +199,38 @@ let player1 = document.querySelector('.player1');
 
 function animeLeft() {
 
-// Left player run
-let frameRunLeft = 0;
-let spritex = 0;
+// // Left player run
+// let frameRunLeft = 0;
+// let spritex = 0;
+//
+// function runLeft() {
+//   if (frameRunLeft >= -11) {
+//     console.log(frameRunLeft);
+//     frameRunLeft--;
+//     spritex = spritex + 50;
+//     player1.style.marginLeft = 45.75 + spritex + 50;
+//     player1.style.backgroundPosition = (frameRunLeft * frameWidth) + 'px';
+//   }
+//   setTimeout(runLeft, 100);
+// }
+//
+// let btnRun = document.querySelector('.runL');
+// btnRun.addEventListener('click', runLeft);
 
-function runLeft() {
-  if (frameRunLeft >= -11) {
-    console.log(frameRunLeft);
-    frameRunLeft--;
-    spritex = spritex + 25;
-    player1.style.marginLeft = 45.75 + spritex + 25;
-    player1.style.backgroundPosition = (frameRunLeft * frameWidth) + 'px';
-  }
-  setTimeout(runLeft, 100);
-}
 
-let btnRun = document.querySelector('.runL');
-btnRun.addEventListener('click', runLeft);
+
+var $div1 = $('.player1');
+$(document).keydown(function(e) {
+    switch (e.which) {
+    case 90:   // left arrow key = letter Z
+        $div1.css('margin-left', '-=10px');
+        break;
+    case 88:   // right arrow key = letter X
+        $div1.css('margin-left', '+=10px');
+        break;
+    }
+})
+
 
 
 
@@ -194,6 +243,9 @@ function punchLeft() {
     framePunchLeft--;
     player1.style.backgroundPosition = (framePunchLeft * frameWidth) + 'px';
   }
+  // leftPunchCount++;
+  // console.log(leftPunchCount);
+
   setTimeout(punchLeft, 100);
 }
 
@@ -303,8 +355,8 @@ function jumpLeft() {
       spritey = spritey - 15;
       player1.style.marginBottom = spritey - 15;
     } else if (frameJumpLeft < -62 && frameJumpLeft > -65) {
-      spritex = spritex + 50;
-      player1.style.marginLeft = 45.75 + spritex + 50;
+      spritex = spritex + 150;
+      player1.style.marginLeft = 45.75 + spritex + 150;
       spritey = spritey + 100;
       player1.style.marginBottom = spritey + 100;
     }
@@ -349,14 +401,6 @@ setInterval(animeLeft, 1500);
 // -------------- Right Player Action Section ----------------//
 
 
-// ------------------ Health Bar -------------------- //
-
-
-let healthRight = document.getElementById("healthRight");
-// health.value -= 10;
-
-
-
 
 //------------------- Right Player ------------------ //
 
@@ -380,23 +424,37 @@ let player2 = document.querySelector('.player2');
 
 function animeRight() {
 
-// Right player run
-let frameRunRight = 0;
-let spritex = 0;
+// // Right player run
+// let frameRunRight = 0;
+// let spritex = 0;
+//
+// function runRight() {
+//   if (frameRunRight <= 11) {
+//     console.log(frameRunRight);
+//     frameRunRight++;
+//     spritex = spritex + 50;
+//     player2.style.marginRight = 45.75 + spritex + 50;
+//     player2.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
+//   }
+//   setTimeout(runRight, 100);
+// }
+//
+// let btnRun = document.querySelector('.runR');
+// btnRun.addEventListener('click', runRight);
 
-function runRight() {
-  if (frameRunRight <= 11) {
-    console.log(frameRunRight);
-    frameRunRight++;
-    spritex = spritex + 25;
-    player2.style.marginRight = 45.75 + spritex + 25;
-    player2.style.backgroundPosition = (frameRunRight * frameWidth) + 'px';
-  }
-  setTimeout(runRight, 100);
-}
 
-let btnRun = document.querySelector('.runR');
-btnRun.addEventListener('click', runRight);
+
+var $div2 = $('.player2');
+$(document).keydown(function(e) {
+    switch (e.which) {
+    case 37:   // left arrow key
+        $div2.css('margin-right', '+=10px');
+        break;
+    case 39:   // right arrow key
+        $div2.css('margin-right', '-=10px');
+        break;
+    }
+})
 
 
 
@@ -517,8 +575,8 @@ function jumpRight() {
     // spritey = spritey - 15;
     // player1.style.marginBottom = spritey - 15;
   } else if (frameJumpRight > 62 && frameJumpRight < 65) {
-    spritex = spritex + 75;
-    player2.style.marginRight = 45.75 + spritex + 75;
+    spritex = spritex + 175;
+    player2.style.marginRight = 45.75 + spritex + 175;
     spritey = spritey + 100;
     player2.style.marginBottom = spritey + 100;
   }

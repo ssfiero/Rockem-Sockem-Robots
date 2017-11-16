@@ -120,8 +120,9 @@ Game page
 }
 
 #battleground {
-background-size: cover;
-background-position: center;
+  background-image: url("/png/backgrounds/salt-flats.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .playerInfo {
@@ -215,7 +216,7 @@ Control Buttons
 .controlButtons {
   background-color: #303030;
   color: white;
-  height: 160px;
+  height: 150px;
 }
 
 .buttonsLeft {
