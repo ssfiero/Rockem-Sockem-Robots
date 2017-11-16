@@ -192,26 +192,51 @@ let countL = 0;
 let buttonPL = document.getElementById("punchL");
 let displayPR = document.getElementById("displayCountPR");
 let healthRight = document.getElementById("hr");
+// let play1Pos = player1.position();
+// let leftPos = play1Pos.left;
+//
+// let play2Pos = player2.position();
+// let leftPos = play2Pos.left;
 
-buttonPL.onclick = function(){
-  countR++;
-  displayPR.innerHTML = countR;
-  // console.log(healthRight.style.width);
-  healthRight.style.width = 400 - (countR * 50);
-  // console.log(healthRight.style.width);
-  // console.log(countR);
-}
+
+$('body').on('keydown', function(e){
+  if (e.which === 81) {   // punch left player
+    countR++;
+    displayPR.innerHTML = countR;
+    // console.log(healthRight.style.width);
+    healthRight.style.width = 400 - (countR * 50);
+    // console.log(healthRight.style.width);
+    // console.log(countR);
+  }
+})
+
+// buttonPL.onclick = function(){
+//   countR++;
+//   displayPR.innerHTML = countR;
+//   // console.log(healthRight.style.width);
+//   healthRight.style.width = 400 - (countR * 50);
+//   // console.log(healthRight.style.width);
+//   // console.log(countR);
+// }
 
 
 // Left Kick
 let buttonKL = document.getElementById("kickL");
 let displayKR = document.getElementById("displayCountKR");
 
-buttonKL.onclick = function(){
-  countR++;
-  displayKR.innerHTML = countR;
-  healthRight.style.width = 400 - (countR * 50);;
-}
+$('body').on('keydown', function(e){
+  if (e.which === 65) {   // kick left player
+    countR++;
+    displayKR.innerHTML = countR;
+    healthRight.style.width = 400 - (countR * 50);;
+  }
+})
+
+// buttonKL.onclick = function(){
+//   countR++;
+//   displayKR.innerHTML = countR;
+//   healthRight.style.width = 400 - (countR * 50);;
+// }
 
 
 // ----------------
@@ -221,21 +246,37 @@ let buttonPR = document.getElementById("punchR");
 let displayPL = document.getElementById("displayCountPL");
 let healthLeft = document.getElementById("hl");
 
-buttonPR.onclick = function(){
-  countL++;
-  displayPL.innerHTML = countL;
-  healthLeft.style.width = 400 - (countL * 50);;
-}
+$('body').on('keydown', function(e){
+  if (e.which === 80) {   // punch right player
+    countL++;
+    displayPL.innerHTML = countL;
+    healthLeft.style.width = 400 - (countL * 50);;
+  }
+})
+
+// buttonPR.onclick = function(){
+//   countL++;
+//   displayPL.innerHTML = countL;
+//   healthLeft.style.width = 400 - (countL * 50);;
+// }
 
 // Right Kick
 let buttonKR = document.getElementById("kickR");
 let displayKL = document.getElementById("displayCountKL");
 
-buttonKR.onclick = function(){
-  countL++;
-  displayKL.innerHTML = countL;
-  healthLeft.style.width = 400 - (countL * 50);;
-}
+$('body').on('keydown', function(e){
+  if (e.which === 76) {   // kick right player
+    countL++;
+    displayKL.innerHTML = countL;
+    healthLeft.style.width = 400 - (countL * 50);;
+  }
+})
+
+// buttonKR.onclick = function(){
+//   countL++;
+//   displayKL.innerHTML = countL;
+//   healthLeft.style.width = 400 - (countL * 50);;
+// }
 
 
 
@@ -264,6 +305,28 @@ let player1 = document.querySelector('.player1');
 
 function animeLeft() {
 
+  let $div1 = $('.player1');
+  $(document).keydown(function(e) {
+      switch (e.which) {
+      case 90:   // move left = letter z
+          $div1.css('margin-left', '-=10px');
+          break;
+      case 88:   // move right = letter x
+          // runLeft();
+          $div1.css('margin-left', '+=10px');
+          break;
+      case 81:   // punch = letter q
+          punchLeft();
+          break;
+      case 65:   // kick = letter a
+          kickLeft();
+          break;
+      }
+  })
+
+
+
+
 // // Left player run
 // let frameRunLeft = 0;
 //
@@ -283,20 +346,6 @@ function animeLeft() {
 
 
 
-var $div1 = $('.player1');
-$(document).keydown(function(e) {
-    switch (e.which) {
-    case 90:   // left arrow key = letter Z
-        $div1.css('margin-left', '-=10px');
-        break;
-    case 88:   // right arrow key = letter X
-        $div1.css('margin-left', '+=10px');
-        break;
-    }
-})
-
-
-
 
 // Left player punch
 let framePunchLeft = -12;
@@ -311,8 +360,8 @@ function punchLeft() {
   setTimeout(punchLeft, 100);
 }
 
-let btnPunch = document.querySelector('.punchL');
-btnPunch.addEventListener('click', punchLeft);
+// let btnPunch = document.querySelector('.punchL');
+// btnPunch.addEventListener('click', punchLeft);
 
 
 
@@ -381,8 +430,8 @@ function kickLeft() {
   setTimeout(kickLeft, 100);
 }
 
-let btnKick = document.querySelector('.kickL');
-btnKick.addEventListener('click', kickLeft);
+// let btnKick = document.querySelector('.kickL');
+// btnKick.addEventListener('click', kickLeft);
 
 
 
@@ -490,6 +539,27 @@ let player2 = document.querySelector('.player2');
 
 function animeRight() {
 
+
+  var $div2 = $('.player2');
+  $(document).keydown(function(e) {
+      switch (e.which) {
+      case 37:   // move left = left arrow key
+          $div2.css('margin-right', '+=10px');
+          break;
+      case 39:   // move right = right arrow key
+          $div2.css('margin-right', '-=10px');
+          break;
+      case 80:   // punch = letter p
+          punchRight();
+          break;
+      case 76:   // kick = letter l
+          kickRight();
+          break;
+      }
+  })
+
+
+
 // // Right player run
 // let frameRunRight = 0;
 //
@@ -509,20 +579,6 @@ function animeRight() {
 
 
 
-var $div2 = $('.player2');
-$(document).keydown(function(e) {
-    switch (e.which) {
-    case 37:   // left arrow key
-        $div2.css('margin-right', '+=10px');
-        break;
-    case 39:   // right arrow key
-        $div2.css('margin-right', '-=10px');
-        break;
-    }
-})
-
-
-
 // Right player punch
 let framePunchRight = 12;
 
@@ -535,8 +591,8 @@ function punchRight() {
   setTimeout(punchRight, 100);
 }
 
-let btnPunch = document.querySelector('.punchR');
-btnPunch.addEventListener('click', punchRight);
+// let btnPunch = document.querySelector('.punchR');
+// btnPunch.addEventListener('click', punchRight);
 
 
 
@@ -604,8 +660,8 @@ function kickRight() {
   setTimeout(kickRight, 100);
 }
 
-let btnKick = document.querySelector('.kickR');
-btnKick.addEventListener('click', kickRight);
+// let btnKick = document.querySelector('.kickR');
+// btnKick.addEventListener('click', kickRight);
 
 
 
