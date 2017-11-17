@@ -16,23 +16,68 @@
 <!-- Landing page -->
 
   <div id="landing-page">
+    <div class="cont">
+    </div>
     <div class="summary">
       <div>
-        <h2>Rock'em Sock'em</h2>
-        <p>This is a version of the 1964 Rock’em Sock’em Robots game.</p>
+        <h1>Rock'em Sock'em</h1>
+        <p id="starP">This is a version of the 1964 Rock’em Sock’em Robots game that was built with Materialize, jQuery and Javascript.</p>
       </div>
+
       <div>
-        <h4>Gameplay</h4>
-        <p></p>
-      </div>
+        <h3><i id="star" class="material-icons">stars</i>Gameplay<i id="star" class="material-icons">stars</i></h3>
+        <ol>
+          <li>Select a player.</li>
+          <li>Select a battleground.</li>
+          <!-- <li>Get ready to fight.</li> -->
+          <li>Punch or kick your opponent.</li>
+          <li>Celebrate victory!</li>
+        </ol>
+
+        <p>Keyboard keys/symbols</p>
+        <table class="centered bordered">
+          <thead>
+          <tr>
+            <th>Player 1</th>
+            <th>Player 2</th>
+          </tr>
+          <thead>
+
+          <tbody>
+          <tr>
+            <td>Q = punch</td>
+            <td>P = punch</td>
+          </tr>
+          <tr>
+            <td>A = kick</td>
+            <td>L = kick</td>
+          </tr>
+          <tr>
+            <td>Z = run left</td>
+            <td>left arrow = run left</td>
+          </tr>
+          <tr>
+            <td>X = run right</td>
+            <td>right arrow = run right</td>
+          </tr>
+        </tbody>
+        </table>
+
+        <p>There are additional moves that can be used during the game by clicking on the buttons for each action. There is also a damage meter to track how much life is left. When a player's healt meter is at zero, the opposing player wins the game.</p>
       <div>
-        <h4>Features</h4>
+        <h3>Features</h3>
+        <p>The game displays motivational quotes and commentary from the Chuck Norris API.</p>
+        <p>The Internet Chuck Norris Database @ http://www.icndb.com</p>
+        <p>Character credit from: sprite.slicker.me</p>
       </div>
+
+      <a id="startBut" class="btn btn-floating btn-large maroon pulse"><i class="material-icons">arrow_downward</i></a>
     </div>
-    <a id="startBut" class="btn btn-floating btn-large maroon pulse"><i class="material-icons">arrow_downward</i></a>
+    </div>
 
+    <div class="cont">
+    </div>
   </div>
-
 
 
 
@@ -366,22 +411,44 @@
         </div>
       </div>
 
-      <div id="chiLef" class="chip">
-        z
-        <i class="material-icons">arrow_back</i>
-      </div>
-      <div id="chiLef" class="chip">
-        x
-        <i class="material-icons">arrow_forward</i>
+      <div>
+        <div id="chiLef" class="chip">
+          z
+          <i class="material-icons">arrow_back</i>
+        </div>
+        <div id="chiLef" class="chip">
+          x
+          <i class="material-icons">arrow_forward</i>
+        </div>
+
+        <div id="chiRig" class="chip">
+          p: punch
+          <i class="material-icons">arrow_forward</i>
+        </div>
+        <div id="chiRig" class="chip">
+          l: kick
+          <i class="material-icons">arrow_back</i>
+        </div>
       </div>
 
-      <div id="chiRig" class="chip">
-        right arrow
-        <i class="material-icons">arrow_forward</i>
-      </div>
-      <div id="chiRig" class="chip">
-        left arrow
-        <i class="material-icons">arrow_back</i>
+      <div>
+        <div id="chiLef" class="chip">
+          w: punch
+          <i class="material-icons"></i>
+        </div>
+        <div id="chiLef" class="chip">
+          a: kick
+          <i class="material-icons"></i>
+        </div>
+
+        <div id="chiRig" class="chip">
+          right arrow
+          <i class="material-icons">arrow_forward</i>
+        </div>
+        <div id="chiRig" class="chip">
+          left arrow
+          <i class="material-icons">arrow_back</i>
+        </div>
       </div>
     </section>
 

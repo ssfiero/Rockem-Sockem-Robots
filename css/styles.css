@@ -7,20 +7,65 @@ Landing page
 =========================*/
 
 #landing-page {
-  height: 804px;
-  background-color: #f8f2e9;
+  height: 900px;
+  background-color: white;
   text-align: center;
+  font-size: 16px;
+}
+.cont {
+  height: 30px;
 }
 
-.summary h2 {
-  text-align: center;
-  padding: 100px 0px;
+.summary {
+  border: 2px solid maroon;
+  margin: 0px 200px;
+}
+
+#star {
+  float: none;
+  font-size: -webkit-xxx-large;
+  margin: 0px 20px;
+  color: maroon;
+  vertical-align: middle;
+}
+
+#starP {
   margin: 0px;
 }
 
-.summary h4 {
+.summary h1 {
   text-align: center;
-  margin: 40px 0px;
+  margin-top: 40px;
+}
+
+.summary h3 {
+  text-align: center;
+  margin: 20px 0px 0px;
+}
+
+ol {
+  text-align: left;
+  margin: 5px 0px 5px 410px;
+}
+
+p {
+  text-align: center;
+  margin: 0px 150px;
+}
+
+table {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+td, th {
+  padding: 5px;
+  width: 50%;
+}
+
+#startBut {
+  margin-bottom: 30px;
 }
 
 
@@ -57,28 +102,29 @@ Carousel
 =========================*/
 
 #player-select {
-  height: 804px;
+  height: 900px;
 }
 
 .carSec {
   background-color: slategrey;
-  height: 740px;
+  height: 840px;
 }
 
 .carSec .carousel {
   background-color: slategrey;
   width: 47%;
-  height: 740px;
+  height: 840px;
   overflow: hidden;
 }
 
 .carousel h3 {
   text-align: center;
   color: maroon;
+  margin-top: 60px;
 }
 
 .carousel-item {
-  margin-top: -170px;
+  margin-top: -160px;
 }
 
 .card .card-image {
@@ -102,7 +148,7 @@ Carousel
 
 #playSelBut {
   text-align: center !important;
-  margin-top: 600px;
+  margin-top: 720px;
 }
 
 
@@ -111,16 +157,16 @@ Slider
 =========================*/
 
 #background-select {
-  height: 804px;
+  height: 900px;
 }
 
 .slider {
-  height: 520px !important;
+  height: 580px !important;
   margin-bottom: 0px;
 }
 
 .slider .slides li {
-  height: 480px !important;
+  height: 540px !important;
 }
 
 .slider .indicators .indicator-item.active {
@@ -133,7 +179,7 @@ Slider
 
 .caption>h3 {
   font-size: 50px;
-  margin-top: 85px;
+  margin-top: 100px;
 }
 
 .caption>.btn {
@@ -151,7 +197,7 @@ Game page - Player Info
 =========================*/
 
 #game-page {
-  height: 804px;
+  height: 900px;
 }
 
 #battleground {
@@ -191,7 +237,7 @@ Game page - Player Info
 
 .players {
   display: flex;
-  height: 360px;
+  height: 400px;
 }
 
 .player1 {
@@ -213,6 +259,7 @@ Game page - Player Info
   /*position: absolute;*/
   margin-right: 25px;
   display: block;
+  margin-bottom: 40px;
 }
 
 .material-icons {
@@ -244,25 +291,25 @@ Game Page - Quotes
 
 .quotes-container {
   text-align: center;
-  height: 120px;
+  height: 140px;
   background-color: #303030;
   color: white;
 }
 
 i.left {
   margin-left: 360px;
-  padding: 30px 0px;
+  padding: 40px 0px;
 }
 
 i.right {
   margin-right: 360px;
-  padding: 30px 0px;
+  padding: 40px 0px;
 }
 
 .quotes {
   font-size: 20px;
   margin: 0px 400px;
-  padding: 30px 0px;
+  padding: 40px 0px;
 }
 
 
@@ -273,7 +320,7 @@ Game Page - Control Buttons
 .controlButtons {
   background-color: #303030;
   color: white;
-  height: 150px;
+  height: 180px;
 }
 
 .buttonsLeft {
@@ -306,15 +353,15 @@ Winner Page
 =========================*/
 
 #winner-page {
-  height: 804px;
+  height: 900px;
 }
 
 .winBack {
   background-image: url("/png/backgrounds/city.jpg");
   background-size: cover;
   background-position: center;
-  height: 560px;
-  padding-top: 100px;
+  height: 660px;
+  padding-top: 150px;
 }
 
 .winBack h3 {
