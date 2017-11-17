@@ -75,7 +75,30 @@ $(".button-collapse").sideNav();
 $('.carousel').carousel();
 
 
+// function setPlay1() {
+//
+//   let selectedArr1 = document.getElementsByClassName('active');
+//   console.log("selected array:", selectedArr1);
+//   let selectedLi1 = selectedArr1[0];
+//   console.log("selected li:", selectedLi1);
+//   let selectedImg1 = selectedArr1[0].childNodes[1].childNodes[1].childNodes[1];
+//   console.log("selected img:", selectedImg1);
+//   let selectedImg21 = selectedImg1.cloneNode();
+//
+//   let playHolder1 = document.getElementById('holder');
+//   playHolder1.appendChild(selectedImg21);
+//   // batHolder.style.backgroundImage = selectedImg;
+//   console.log(playHolder1);
+//
+// }
+//
+// let play1Button = document.getElementById('car1');
+// play1Button.addEventListener('click', setPlay1);
 
+
+
+
+// ------------ Background selection ------------- //
 
 function setBack() {
 
@@ -86,10 +109,6 @@ function setBack() {
   let selectedImg = selectedArr[2].childNodes[1];
   console.log("selected img:", selectedImg);
   let selectedImg2 = selectedImg.cloneNode();
-
-  // let battle = document.getElementById('battleground');
-  // battle.appendChild(selectedImg);
-  // console.log(battle);
 
   let batHolder = document.getElementById('holder');
   batHolder.appendChild(selectedImg2);

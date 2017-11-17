@@ -200,20 +200,6 @@ Game page - Player Info
   height: 900px;
 }
 
-/*#battleground {
-  background-image: url("/png/backgrounds/salt-flats.jpg");
-  background-size: cover;
-  background-position: center;
-}*/
-
-/*#battleground img {
-  background-size: cover;
-  background-position: center;
-  height: 560px;
-  width: 100%;
-  margin-top: -560px;
-}*/
-
 #battleground img {
   background-size: cover;
   background-position: center;
@@ -267,6 +253,16 @@ Game page - Player Info
   position: absolute;
   display: block;
 }
+/*
+#holder {
+  height: 360px;
+  width: 330px;
+  float: left;
+  margin: auto;
+  position: absolute;
+  display: block;
+  z-index: 1;
+}*/
 
 .player2 {
   height: 360px;
