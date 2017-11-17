@@ -38,6 +38,7 @@ $("#startOver").click(function() {
 });
 
 
+
 // ----------- Initial game state ------------------ //
 // $('#background-select').hide();
 // $('#game-page').hide();
@@ -77,27 +78,23 @@ $('.carousel').carousel();
 
 
 function setBack() {
+
+  let selectedArr = document.getElementsByClassName('active');
+  console.log("selected array:", selectedArr);
+  let selectedLi = selectedArr[2];
+  console.log("selected li:", selectedLi);
+  let selectedImg = selectedArr[2].childNodes[1];
+  console.log("selected img:", selectedImg);
+  let selectedImg2 = selectedImg.cloneNode();
+
   // let battle = document.getElementById('battleground');
+  // battle.appendChild(selectedImg);
   // console.log(battle);
-  // battle.style.backgroundImage = "url('/png/backgrounds/pyramids.jpg')";
-  // battle.style.backgroundImage = event.target.backgroundImage;
 
-  // if ( $('.li').hasClass('active')) {
-  //   let battle = document.getElementById('battleground');
-  //   console.log(battle);
-  //   battle.style.backgroundImage = $(this).style.backgroundImage;
-  //   console.log(battle.style.backgroundImage);
-  // }
-
-  if ( $('.li').hasClass('active')) {
-    let battle = document.getElementById('battleground');
-    // console.log(battle);
-    battle.style.backgroundImage = $(this).style.backgroundImage;
-    // console.log(battle.style.backgroundImage);
-  }
-
-
-
+  let batHolder = document.getElementById('holder');
+  batHolder.appendChild(selectedImg2);
+  // batHolder.style.backgroundImage = selectedImg;
+  console.log(batHolder);
 
 }
 
@@ -304,6 +301,18 @@ $('body').on('keydown', function(e){
 //   countL++;
 //   displayKL.innerHTML = countL;
 //   healthLeft.style.width = 400 - (countL * 50);;
+// }
+
+// let displayCountPLValue
+
+// if (displayPL.value > 8 || displayKL > 8 || displayPR.value > 8 || displayKR > 8) {
+//   $("#gameSelBut")(function() {
+//     $('html, body').animate({
+//       scrollTop: $("#winner-page").offset().top
+//     });
+//   });
+// } else {
+//
 // }
 
 
