@@ -3,6 +3,13 @@
 My project is a version of the 1964 game Rock’em Sock’em Robots.
 
 
+## Project Links
+
+Deployed site: http://rockem-sockem.surge.sh/
+
+Github repo: https://github.com/ssfiero/Rockem-Sockem-Robots
+
+
 ## Why:
 I am just now wrapping up another project called Javascript Pixel Art, and I thought it would be a cool idea to create a pixelized version of the Rock’em Sock’em Robots game.
 
@@ -29,5 +36,5 @@ The player will use the arrow keys on the keyboard to punch. There will be a dam
 ## Technologies:
 * Materialize for the front-end
 * HTML, CSS, Plain old Javascript
-* Pixi.js for animations, and Matter.js for the physics engine
+* Sprite sheets were used for animations
 * jQuery to make AJAX calls to API

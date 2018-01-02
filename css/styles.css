@@ -253,8 +253,8 @@ Game page - Player Info
   position: absolute;
   display: block;
 }
-/*
-#holder {
+
+/*#player1h {
   height: 360px;
   width: 330px;
   float: left;
