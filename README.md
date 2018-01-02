@@ -4,7 +4,6 @@ My project is a version of the 1964 game Rock’em Sock’em Robots.
 
 
 ## Project Links
-
 Deployed site: http://rockem-sockem.surge.sh/
 
 Github repo: https://github.com/ssfiero/Rockem-Sockem-Robots
